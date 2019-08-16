@@ -1,0 +1,640 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DocGen.Controller.RibbonController" Collapsed="true">
+    <Position X="7.75" Y="10.5" Width="3" />
+    <AssociationLine Name="documentsfactory" Type="DocGen.Model.Documents.DocumentsFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.188" Y="10.5" />
+        <Point X="8.188" Y="9.153" />
+        <Point X="5.938" Y="9.153" />
+        <Point X="5.938" Y="7.812" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="emptyDocumentsFactory" Type="DocGen.View.EmptyDocuments.EmptyDocumentsFactory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="11.062" />
+        <Point X="8.5" Y="16.25" />
+        <Point X="5.5" Y="16.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="formattersFactory" Type="DocGen.View.Formatters.FormattersFactory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9" Y="11.062" />
+        <Point X="9" Y="16.25" />
+        <Point X="11.25" Y="16.25" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="unformattersFactory" Type="DocGen.View.Unformatters.UnformattersFactory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.438" Y="11.062" />
+        <Point X="9.438" Y="15.195" />
+        <Point X="20.188" Y="15.195" />
+        <Point X="20.188" Y="16" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="drawer" Type="DocGen.View.SheetBordersDrawer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.166" Y="11.062" />
+        <Point X="8.166" Y="11.812" />
+        <Point X="7.5" Y="11.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.11" Y="-0.296" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="specExporter" Type="DocGen.Model.Exporters.IExporter">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.154" Y="-0.244" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="settingsForm" Type="DocGen.View.SettingsForm" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.375" Y="11.062" />
+        <Point X="10.375" Y="12.346" />
+        <Point X="12.25" Y="12.346" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="about" Type="DocGen.View.AboutWindow" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.938" Y="11.062" />
+        <Point X="9.938" Y="13.846" />
+        <Point X="12.25" Y="13.846" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAQAAACItAIAAEBABBAJAAQAAyAAAAQDAAYAAAAAAAg=</HashCode>
+      <FileName>Controller\RibbonController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="documentsfactory" />
+      <Field Name="emptyDocumentsFactory" />
+      <Field Name="formattersFactory" />
+      <Field Name="unformattersFactory" />
+      <Field Name="drawer" />
+      <Field Name="pe3Exporter" />
+      <Field Name="specExporter" />
+      <Field Name="blankForm" />
+      <Field Name="settingsForm" />
+      <Field Name="about" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DocGen.DocGenRibbon" Collapsed="true">
+    <Position X="12.25" Y="9" Width="1.5" />
+    <AssociationLine Name="controller" Type="DocGen.Controller.RibbonController" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12.25" Y="9.201" />
+        <Point X="10.375" Y="9.201" />
+        <Point X="10.375" Y="10.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.215" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>SrFQAAgAICAgQQEAEACCAQUDAACECgDAAEAAAAAAAwA=</HashCode>
+      <FileName>DocGenRibbon.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="controller" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DocGen.ThisRibbonCollection" Collapsed="true">
+    <Position X="15" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Ribbon1" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DocGen.ThisAddIn" Collapsed="true">
+    <Position X="20.75" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>QAAwAACQCBAAEQAgAQEAgFgAAAAAABAQAAgAIAAAACg=</HashCode>
+      <FileName>ThisAddIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Globals" Collapsed="true">
+    <Position X="18.25" Y="7.75" Width="2.25" />
+    <AssociationLine Name="ThisAddIn" Type="DocGen.ThisAddIn" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="20.125" Y="8.312" />
+        <Point X="20.125" Y="9.397" />
+        <Point X="20.75" Y="9.397" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Ribbons" Type="DocGen.ThisRibbonCollection" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18.75" Y="8.312" />
+        <Point X="18.75" Y="9.375" />
+        <Point X="17.25" Y="9.375" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>EAgAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAAACAAAAgAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ThisAddIn" />
+      <Property Name="Ribbons" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DocGen.Model.Blank" Collapsed="true">
+    <Position X="17.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\Blank.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.BOMReader" Collapsed="true">
+    <Position X="1.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAADAIAAJJAAABQQAIggIAAAAABCkgAEAAIAAACAA=</HashCode>
+      <FileName>Model\BOMReader.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.ComponentList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ComponentList.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Groups" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.37" />
+  </Class>
+  <Class Name="DocGen.Model.Components" Collapsed="true">
+    <Position X="14.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAIAAIAAAAAAAAAAAAIAAAIAAAACAAgDAAAgA=</HashCode>
+      <FileName>Model\Components.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Part" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DocGen.Model.Group" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="2" Width="1.5" />
+    <AssociationLine Name="Headers" Type="DocGen.Model.GroupHeader">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.822" Y="0.472" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AApACAAAAAAAABAAAEAAAAAgCAEAABBAAAAABADIAAA=</HashCode>
+      <FileName>Model\Group.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CList" />
+      <Property Name="Headers" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DocGen.Model.GroupFiller" Collapsed="true">
+    <Position X="8.25" Y="3.25" Width="1.5" />
+    <AssociationLine Name="groups" Type="DocGen.Model.Group" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.75" Y="3.562" />
+        <Point X="11.062" Y="3.562" />
+        <Point X="11.062" Y="2.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>QACAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\GroupFiller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="groups" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DocGen.Model.GroupHeader" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgACAAAAAAAAAAAgAAAAAQAAAAAAIAAAAAAABAAAgA=</HashCode>
+      <FileName>Model\GroupHeader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.725" />
+  </Class>
+  <Class Name="DocGen.Model.Part" Collapsed="true">
+    <Position X="17" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAgAAAAAAAoAAAAAAAAAAAAAQAAAAEAAAA=</HashCode>
+      <FileName>Model\Part.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.Settings" Collapsed="true">
+    <Position X="17.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACgQAAAAAQAgACAAAAAoAAAAAABBAgAAUQBAgCGAEAA=</HashCode>
+      <FileName>Model\Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.SettingsFactory" Collapsed="true">
+    <Position X="15" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\SettingsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.Documents.Document" Collapsed="true">
+    <Position X="5.25" Y="2" Width="1.5" />
+    <AssociationLine Name="bom" Type="DocGen.Model.Components" ManuallyRouted="true">
+      <Path>
+        <Point X="6" Y="2" />
+        <Point X="6" Y="1.377" />
+        <Point X="15.25" Y="1.377" />
+        <Point X="15.25" Y="2" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="filler" Type="DocGen.Model.GroupFiller" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="6.375" Y="2.562" />
+        <Point X="6.375" Y="3.531" />
+        <Point X="8.25" Y="3.531" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AACQAAAAAAIQAAAJAABAAhgIAACAEIAAAQAAAEAYIgA=</HashCode>
+      <FileName>Model\Documents\Document.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="bomReader" />
+      <Field Name="filler" />
+      <Property Name="ComponentList" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="bom" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DocGen.Model.Documents.DocumentsFactory" Collapsed="true">
+    <Position X="4.75" Y="7.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAA=</HashCode>
+      <FileName>Model\Documents\DocumentsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.Documents.PE3" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABCAAAAAAAQEAAAAQAgAAAAAAA=</HashCode>
+      <FileName>Model\Documents\PE3.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="rows" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DocGen.Model.Documents.RowPE3" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAQAAAAAAAAAQAAAgAEAAAA=</HashCode>
+      <FileName>Model\Documents\RowPE3.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DocGen.Model.Documents.RowSpec" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgABAAAAQAAAgAAgAAAAAAgAEAAAA=</HashCode>
+      <FileName>Model\Documents\RowSpec.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DocGen.Model.Documents.Specification" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <AssociationLine Name="Others" Type="DocGen.Model.Documents.RowSpec">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.497" Y="0.09" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAACAAAgABCAABAAAAQEAAAAQAgAAAIAAA=</HashCode>
+      <FileName>Model\Documents\Specification.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Others" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="DocGen.Model.Documents.Templates.DocumentsSection" Collapsed="true">
+    <Position X="9" Y="7.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\Documents\Templates\DocumentsSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.Documents.Templates.PartsSection" Collapsed="true">
+    <Position X="9" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Model\Documents\Templates\PartsSection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Model.Exporters.PE3Exporter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Exporters\PE3Exporter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.166" />
+  </Class>
+  <Class Name="DocGen.Model.Exporters.SpecificationExporter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="6" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Exporters\SpecificationExporter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DocGen.Properties.Resources" Collapsed="true">
+    <Position X="18.25" Y="5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAIAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Properties.Settings" Collapsed="true">
+    <Position X="18.25" Y="6.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAEAAAAIAAAAAABAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Settings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Utils.DesignatorShortener" Collapsed="true">
+    <Position X="5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\DesignatorShortener.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Utils.ExcelHelper" Collapsed="true">
+    <Position X="24" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAQAAAgAAAAAAQAAAAAAAAAAABAAAAAAAgAAAA=</HashCode>
+      <FileName>Utils\ExcelHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Utils.JsonHelper" Collapsed="true">
+    <Position X="20" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAIAAAAEAAAAAEAQABAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Utils\JsonHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Utils.SheetHelper" Collapsed="true">
+    <Position X="24" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\SheetHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.Utils.StyleHelper" Collapsed="true">
+    <Position X="24" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils\StyleHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.AboutWindow" Collapsed="true">
+    <Position X="12.25" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABgAABCAAAACEAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>View\AboutWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.SettingsForm" Collapsed="true">
+    <Position X="12.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>9RAAJAEAACQgABABCBCAAAACFACIIABAACCAUCQBAQA=</HashCode>
+      <FileName>View\SettingsForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="factory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DocGen.View.SheetBordersDrawer" Collapsed="true">
+    <Position X="5.75" Y="11.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEQAAAQACAQAAACAAACIBgAAAAAAAgAAAAAA=</HashCode>
+      <FileName>View\SheetBordersDrawer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Blank.A4FirstPageBlankTextFiller" Collapsed="true">
+    <Position X="8.25" Y="22.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Blank\A4FirstPageBlankTextFiller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Blank.A4SecondPageBlankTextFiller" Collapsed="true">
+    <Position X="14" Y="22.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Blank\A4SecondPageBlankFiller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Blank.BlankForm" Collapsed="true">
+    <Position X="12.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBAAABAAACQAAAAAQACAAAACAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Blank\BlankForm.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="blankUC" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DocGen.View.Blank.BlankUC" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BBAAAAAAAAAAAAAAAAAEAAAAAAAAgAAAAAAAAAAgAAA=</HashCode>
+      <FileName>View\Blank\BlankUC.xaml.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="blank" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DocGen.View.Blank.ListPage" Collapsed="true">
+    <Position X="24" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAEAAAAAAAAAAAEAAQAIAAAgABAA=</HashCode>
+      <FileName>View\Blank\ListPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.EmptyDocuments.EmptyDocument" Collapsed="true">
+    <Position X="3.75" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABEAAQAAAAQAAEAAAAAAAAgEAAAAAgAAAAAEAAA=</HashCode>
+      <FileName>View\EmptyDocuments\EmptyDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.EmptyDocuments.EmptyDocumentsFactory" Collapsed="true">
+    <Position X="3.5" Y="16" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>View\EmptyDocuments\EmptyDocumentsFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.EmptyDocuments.PE3EmptyDocument" Collapsed="true">
+    <Position X="2" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>View\EmptyDocuments\PE3EmptyDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.EmptyDocuments.SpecEmptyDocument" Collapsed="true">
+    <Position X="4.75" Y="18.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAEAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>View\EmptyDocuments\SpecEmptyDocument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.A4FirstPage" Collapsed="true">
+    <Position X="8.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAABQAAAAAAQQAECgBAAAAAAAAAAAAAAAAUAAA=</HashCode>
+      <FileName>View\Formatters\A4FirstPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.A4SecondPage" Collapsed="true">
+    <Position X="14.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAhQAAAAAAQQQECgAAAAAAAAAAAAAAAAAUAAA=</HashCode>
+      <FileName>View\Formatters\A4SecondPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.Formatter" Collapsed="true">
+    <Position X="11.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAiQAAAEACAAAAAAFAAAiAAAAAAAAQAgAAAAA=</HashCode>
+      <FileName>View\Formatters\Formatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.FormattersFactory" Collapsed="true">
+    <Position X="11.25" Y="16" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>View\Formatters\FormattersFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.PE3FirstPage" Collapsed="true">
+    <Position X="7.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAQQAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Formatters\PE3FirstPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.PE3Formatter" Collapsed="true">
+    <Position X="10.25" Y="18.25" Width="1.5" />
+    <InheritanceLine Type="DocGen.View.Formatters.Formatter" FixedFromPoint="true">
+      <Path>
+        <Point X="12.188" Y="17.562" />
+        <Point X="12.188" Y="17.875" />
+        <Point X="11" Y="17.875" />
+        <Point X="11" Y="18.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>View\Formatters\PE3Formatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.PE3SecondPage" Collapsed="true">
+    <Position X="12" Y="21" Width="1.5" />
+    <InheritanceLine Type="DocGen.View.Formatters.A4SecondPage" FixedToPoint="true">
+      <Path>
+        <Point X="15" Y="20.312" />
+        <Point X="15" Y="20.925" />
+        <Point X="12.75" Y="20.925" />
+        <Point X="12.75" Y="21" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQQAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Formatters\PE3SecondPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.RegistrationList" Collapsed="true">
+    <Position X="14.25" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQQAEAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>View\Formatters\RegistrationList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.SpecFirstPage" Collapsed="true">
+    <Position X="9.75" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAQQAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Formatters\SpecFirstPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.SpecFormatter" Collapsed="true">
+    <Position X="12.5" Y="18.25" Width="1.5" />
+    <InheritanceLine Type="DocGen.View.Formatters.Formatter" FixedFromPoint="true">
+      <Path>
+        <Point X="12.188" Y="17.562" />
+        <Point X="12.188" Y="17.875" />
+        <Point X="13.25" Y="17.875" />
+        <Point X="13.25" Y="18.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>View\Formatters\SpecFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Formatters.SpecSecondPage" Collapsed="true">
+    <Position X="16.5" Y="21" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQQAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Formatters\SpecSecondPage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Unformatters.PE3Unformatter" Collapsed="true">
+    <Position X="18.25" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Unformatters\PE3Unformatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Unformatters.SpecUnformatter" Collapsed="true">
+    <Position X="20.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Unformatters\SpecUnformatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Unformatters.Unformatter" Collapsed="true">
+    <Position X="19.5" Y="17" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAEAAAQBAAAIAAAAAAAAAAAAAAAAAAgAAAAAEAAA=</HashCode>
+      <FileName>View\Unformatters\Unformatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DocGen.View.Unformatters.UnformattersFactory" Collapsed="true">
+    <Position X="19.25" Y="16" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\Unformatters\UnformattersFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DocGen.Model.Documents.IRow" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Documents\IRow.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DocGen.Model.Exporters.IExporter" Collapsed="true">
+    <Position X="4.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Exporters\IExporter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DocGen.Utils.Names" Collapsed="true">
+    <Position X="24" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AkgCAAACJJKgIREAFAAAAAUAAIIBJgIAABAgAAAAAAA=</HashCode>
+      <FileName>Utils\NamesEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
