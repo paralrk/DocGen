@@ -36,7 +36,6 @@ namespace DocGen.Model.Documents
 
         public void Generate()
         {
-            Stopwatch sw = new Stopwatch();
             ReadBOM();
             if (bom != null)
             {
