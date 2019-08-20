@@ -32,7 +32,7 @@ namespace DocGen.Utils
         {
             xlApp.PrintCommunication = false;
             Excel.PageSetup pageSetup = (Excel.PageSetup)sheet.PageSetup;
-            pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+            //pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
             pageSetup.BottomMargin = xlApp.CentimetersToPoints(0.0);
             pageSetup.TopMargin = xlApp.CentimetersToPoints(0.5);
             pageSetup.LeftMargin = xlApp.CentimetersToPoints(0.5);
