@@ -35,7 +35,7 @@ namespace DocGen.Utils
             //pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
             pageSetup.BottomMargin = xlApp.CentimetersToPoints(0.0);
             pageSetup.TopMargin = xlApp.CentimetersToPoints(0.5);
-            pageSetup.LeftMargin = xlApp.CentimetersToPoints(0.5);
+            pageSetup.LeftMargin = xlApp.CentimetersToPoints(0.7);
             pageSetup.RightMargin = xlApp.CentimetersToPoints(0.5);
             pageSetup.HeaderMargin = xlApp.CentimetersToPoints(0.0);
             pageSetup.FooterMargin = xlApp.CentimetersToPoints(0.0);
