@@ -80,18 +80,18 @@ namespace DocGen.View.Formatters
             Excel.Range range;
 
             range = sheet.Rows;
-            range.RowHeight = 25; // 9mm
+            range.RowHeight = 26; // 9mm
 
             range = sheet.Range["1:1"];
-            range.RowHeight = 41.75; // 15mm
+            range.RowHeight = 43; // 15mm
             //range = sheet.Range["2:24"];
             //range.RowHeight = 24.9; // 9mm
             range = sheet.Range["25:25"];
-            range.RowHeight = 8; // 3mm
+            range.RowHeight = 9; // 3mm
             range = sheet.Range["26:26"];
-            range.RowHeight = 17; // 6mm
-            range = sheet.Range["27:28"];
-            range.RowHeight = 23; // 8mm
+            range.RowHeight = 18; // 6mm
+            //range = sheet.Range["27:28"];
+            //range.RowHeight = 23; // 8mm
             range = sheet.Range["29:37"];
             range.RowHeight = 14.5; // 5mm
 
@@ -119,20 +119,49 @@ namespace DocGen.View.Formatters
             column.ColumnWidth = 0.92; // 3mm
             range = sheet.Range["G1:I1"];
             column = range.EntireColumn;
-            column.ColumnWidth = 3.5; // 9mm
+            column.ColumnWidth = 3.86; // 9mm
             range = sheet.Range["J1"];
             column = range.EntireColumn;
-            column.ColumnWidth = 2; // 6mm
+            column.ColumnWidth = 2.29; // 6mm
             str = "P1" + sep + "R1";
             range = sheet.Range[str];
             column = range.EntireColumn;
-            column.ColumnWidth = 5.9; // 14mm
+            column.ColumnWidth = 6.29; // 14mm
             range = sheet.Range["Q1"];
             column = range.EntireColumn;
-            column.ColumnWidth = 10; // 23mm
+            column.ColumnWidth = 10.71; // 23mm
             range = sheet.Range["Y1:Z1"];
             column = range.EntireColumn;
-            column.ColumnWidth = 3.9; //10 mm
+            column.ColumnWidth = 4.29; //10 mm
+
+            // 125% (120DPI) display scaling
+            //string str = "A1" + sep + "F1" + sep + "K1:L1" + sep + "O1" + sep + "S1:X1";
+            //range = sheet.Range[str];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 1.7; // 5mm
+            //str = "B1:D1" + sep + "M1:N1";
+            //range = sheet.Range[str];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 2.5; // 7mm
+            //range = sheet.Range["E1"];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 0.92; // 3mm
+            //range = sheet.Range["G1:I1"];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 3.5; // 9mm
+            //range = sheet.Range["J1"];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 2; // 6mm
+            //str = "P1" + sep + "R1";
+            //range = sheet.Range[str];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 5.9; // 14mm
+            //range = sheet.Range["Q1"];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 10; // 23mm
+            //range = sheet.Range["Y1:Z1"];
+            //column = range.EntireColumn;
+            //column.ColumnWidth = 3.9; //10 mm
         }
         virtual protected void MergeCells()
         {
