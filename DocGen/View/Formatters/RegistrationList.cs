@@ -22,7 +22,7 @@ namespace DocGen.View.Formatters
             Excel.Range range;
             str = firstRow + ":" + (firstRow + 2);
             range = sheet.Range[str];
-            range.RowHeight = 28;
+            range.RowHeight = 29;
             //str = (firstRow + 1) + ":" + (firstRow + 1);
             //range = sheet.Range[str];
             //range.RowHeight = 25;
