@@ -142,7 +142,7 @@
             // 
             // BlankButton
             // 
-            this.BlankButton.Label = "Основная рамка";
+            this.BlankButton.Label = "Основная надпись";
             this.BlankButton.Name = "BlankButton";
             this.BlankButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.BlankButton_Click);
             // 

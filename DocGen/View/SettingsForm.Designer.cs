@@ -58,12 +58,12 @@
             this.groupLimitSpecUpDown = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.regListUpDown = new System.Windows.Forms.NumericUpDown();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.defaultButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.regListUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupLimitPE3UpDown)).BeginInit();
@@ -71,8 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.positionIncUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.startPositionUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupLimitSpecUpDown)).BeginInit();
-            this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.regListUpDown)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -292,7 +292,7 @@
             // groupLimitPE3UpDown
             // 
             this.groupLimitPE3UpDown.Location = new System.Drawing.Point(236, 85);
-            this.groupLimitPE3UpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupLimitPE3UpDown.Margin = new System.Windows.Forms.Padding(4);
             this.groupLimitPE3UpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -334,7 +334,7 @@
             // positionIncUpDown
             // 
             this.positionIncUpDown.Location = new System.Drawing.Point(236, 199);
-            this.positionIncUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.positionIncUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.positionIncUpDown.Maximum = new decimal(new int[] {
             10,
             0,
@@ -367,7 +367,7 @@
             // startPositionUpDown
             // 
             this.startPositionUpDown.Location = new System.Drawing.Point(236, 158);
-            this.startPositionUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.startPositionUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.startPositionUpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -400,7 +400,7 @@
             // groupLimitSpecUpDown
             // 
             this.groupLimitSpecUpDown.Location = new System.Drawing.Point(236, 85);
-            this.groupLimitSpecUpDown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupLimitSpecUpDown.Margin = new System.Windows.Forms.Padding(4);
             this.groupLimitSpecUpDown.Maximum = new decimal(new int[] {
             99,
             0,
@@ -430,11 +430,36 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "Минимальное количество элементов для группировки";
             // 
+            // regListUpDown
+            // 
+            this.regListUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.regListUpDown.Location = new System.Drawing.Point(215, 45);
+            this.regListUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.regListUpDown.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.regListUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.regListUpDown.Name = "regListUpDown";
+            this.regListUpDown.Size = new System.Drawing.Size(49, 24);
+            this.regListUpDown.TabIndex = 8;
+            this.toolTip.SetToolTip(this.regListUpDown, "От 1 до 10");
+            this.regListUpDown.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            // 
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.saveButton.Location = new System.Drawing.Point(765, 412);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(141, 32);
             this.saveButton.TabIndex = 12;
@@ -446,7 +471,7 @@
             // 
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cancelButton.Location = new System.Drawing.Point(915, 412);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(141, 32);
             this.cancelButton.TabIndex = 13;
@@ -458,7 +483,7 @@
             // 
             this.defaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.defaultButton.Location = new System.Drawing.Point(1064, 412);
-            this.defaultButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.defaultButton.Margin = new System.Windows.Forms.Padding(4);
             this.defaultButton.Name = "defaultButton";
             this.defaultButton.Size = new System.Drawing.Size(141, 32);
             this.defaultButton.TabIndex = 14;
@@ -486,31 +511,6 @@
             this.label14.TabIndex = 7;
             this.label14.Text = "Добавить лист регистрации изменений при количестве листов более";
             // 
-            // regListUpDown
-            // 
-            this.regListUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.regListUpDown.Location = new System.Drawing.Point(215, 45);
-            this.regListUpDown.Margin = new System.Windows.Forms.Padding(4);
-            this.regListUpDown.Maximum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.regListUpDown.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.regListUpDown.Name = "regListUpDown";
-            this.regListUpDown.Size = new System.Drawing.Size(49, 24);
-            this.regListUpDown.TabIndex = 8;
-            this.toolTip.SetToolTip(this.regListUpDown, "От 1 до 10");
-            this.regListUpDown.Value = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -525,7 +525,7 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SettingsForm";
-            this.Text = "SettingsForm";
+            this.Text = "Настройки";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -535,8 +535,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.positionIncUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.startPositionUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupLimitSpecUpDown)).EndInit();
-            this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.regListUpDown)).EndInit();
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
