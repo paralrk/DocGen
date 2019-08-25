@@ -37,10 +37,9 @@
             // 
             // saveButton
             // 
-            this.saveButton.Location = new System.Drawing.Point(1208, 352);
-            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.saveButton.Location = new System.Drawing.Point(906, 286);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(107, 37);
+            this.saveButton.Size = new System.Drawing.Size(80, 30);
             this.saveButton.TabIndex = 1;
             this.saveButton.Text = "Сохранить";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -49,19 +48,17 @@
             // elementHost
             // 
             this.elementHost.Location = new System.Drawing.Point(0, 0);
-            this.elementHost.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.elementHost.Name = "elementHost";
-            this.elementHost.Size = new System.Drawing.Size(1440, 345);
+            this.elementHost.Size = new System.Drawing.Size(1080, 280);
             this.elementHost.TabIndex = 0;
             this.elementHost.Text = "elementHost1";
             this.elementHost.Child = this.blankUC;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(1323, 352);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelButton.Location = new System.Drawing.Point(992, 286);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(107, 37);
+            this.cancelButton.Size = new System.Drawing.Size(80, 30);
             this.cancelButton.TabIndex = 2;
             this.cancelButton.Text = "Отмена";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -69,15 +66,14 @@
             // 
             // BlankForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1437, 385);
+            this.ClientSize = new System.Drawing.Size(1079, 319);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.elementHost);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MaximumSize = new System.Drawing.Size(1455, 432);
-            this.MinimumSize = new System.Drawing.Size(1455, 432);
+            this.MaximumSize = new System.Drawing.Size(1095, 358);
+            this.MinimumSize = new System.Drawing.Size(1095, 358);
             this.Name = "BlankForm";
             this.Text = "Основная надпись";
             this.Load += new System.EventHandler(this.BlankForm_Load);
