@@ -62,7 +62,7 @@ namespace DocGen.View
 
         private void FillForm(Settings settings)
         {
-            this.designatorBox.Text = settings.Description;
+            this.designatorBox.Text = settings.Designator;
             this.typeBox.Text = settings.Type;
             this.manufacturerPartNumberBox.Text = settings.ManufacturerPartNumber;
             this.descriptionBox.Text = settings.Description;
