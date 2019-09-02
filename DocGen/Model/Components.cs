@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocGen.Utils;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,7 +49,12 @@ namespace DocGen.Model
 
         public void AddDesignator (string des)
         {
-            designators.AddLast(des);
+            //designators.AddLast(des);
+            string[] splitted  = DesignatorsSplitter.SplitDesignators(des);
+            foreach (string s in splitted)
+            {
+                designators.AddLast(s);
+            }
         }
 
         public bool IsEqualHeader(Components c)
