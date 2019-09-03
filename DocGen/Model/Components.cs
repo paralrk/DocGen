@@ -20,6 +20,11 @@ namespace DocGen.Model
             this.Part = new Part();
         }
 
+        public Components(Part part)
+        {
+            this.Part = part;
+        }
+
         public void AddComponent(Components c)
         {
             designators.AddLast(c.GetDesignators());
@@ -49,12 +54,12 @@ namespace DocGen.Model
 
         public void AddDesignator (string des)
         {
-            //designators.AddLast(des);
-            string[] splitted  = DesignatorsSplitter.SplitDesignators(des);
-            foreach (string s in splitted)
-            {
-                designators.AddLast(s);
-            }
+            designators.AddLast(des);
+            //string[] splitted  = DesignatorsSplitter.SplitDesignators(des);
+            //foreach (string s in splitted)
+            //{
+            //    designators.AddLast(s);
+            //}
         }
 
         public bool IsEqualHeader(Components c)

@@ -7,6 +7,7 @@ using Excel = Microsoft.Office.Interop.Excel;
 using Office = Microsoft.Office.Core;
 using Microsoft.Office.Tools.Excel;
 using DocGen.Model;
+using DocGen.Utils;
 
 namespace DocGen.Model
 {
@@ -151,14 +152,15 @@ namespace DocGen.Model
 
             // make and add new Component in bom with order from setOrder()
             Components c = new Components();
-            Part p = c.Part;
+            Part p = new Part();
             Excel.Range cells = (Excel.Range)bomSheet.Cells;
             string cellValue2 = "";
+            string designator = "";
 
             if (isDesignator)
             {
-                //c.Designator = Convert.ToString(bomSheet.Cells[row, DESIGNATOR].Value);
-                c.AddDesignator(Convert.ToString((cells[row, DESIGNATOR] as Excel.Range).Value2));
+                //c.AddDesignator(Convert.ToString((cells[row, DESIGNATOR] as Excel.Range).Value2));
+                designator = Convert.ToString((cells[row, DESIGNATOR] as Excel.Range).Value2);
             }
 
             if (isType)
@@ -217,7 +219,15 @@ namespace DocGen.Model
                     c.Quantity = 1;
                 }
             }
-            bom.Add(c);
+            string[] splitted = DesignatorsSplitter.SplitDesignators(designator);
+            foreach (string s in splitted)
+            {
+                c = new Components(p);
+                c.AddDesignator(s);
+                c.Quantity = 1;
+                bom.Add(c);
+            }
+
         } // addComponent
     }
 }
