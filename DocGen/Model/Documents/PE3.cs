@@ -59,6 +59,10 @@ namespace DocGen.Model.Documents
                     row = new RowPE3();
                     rows.Add(row);
                     row.Designator = DesignatorShortener.Short(c.GetDesignatorsList());
+                    if (!String.IsNullOrEmpty(c.Part.Description))
+                    {
+                        c.Part.Description = "(" + c.Part.Description + ")";
+                    }
                     if (group.IsInHeaders(c))
                     {
                         row = AddName(rows, c.Part.ManufacturerPartNumber);

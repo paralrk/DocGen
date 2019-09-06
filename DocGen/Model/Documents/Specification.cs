@@ -80,6 +80,10 @@ namespace DocGen.Model.Documents
                         note += ", ";
                     }
 
+                    if (!String.IsNullOrEmpty(c.Part.Description))
+                    {
+                        c.Part.Description = "(" + c.Part.Description + ")";
+                    }
                     // print header for subgroup and print Name and Note
                     if (group.IsInHeaders(c))
                     {
