@@ -117,6 +117,7 @@ namespace DocGen.Model.Documents
                     row.Quantity = c.Quantity;
                     Others.AddRange(partRows);
                     previous = c;
+                    Others.Add(new RowSpec());
                 }
                 // empty row within groups
                 Others.Add(new RowSpec());
