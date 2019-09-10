@@ -32,7 +32,8 @@ namespace DocGen.View.Unformatters
                 cell = (Excel.Range)usedRange.Cells[i, 7];
                 if ((bool)cell.MergeCells)
                 {
-                    if (cell.MergeArea.Count != 9)
+                    if (cell.MergeArea.Count != 9 &&
+                        cell.MergeArea.Count != 15)
                     {
                         delete = true;
                     }
