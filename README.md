@@ -29,4 +29,6 @@ https://www.dropbox.com/sh/d06g5ztpo5god0l/AAAyZa0fCUEL5pAXjVfLNN4ta?dl=0
 ![alt text](https://github.com/paralrk/DocGen/blob/master/Media/Оформленный%20Excel.png)
 
 Пример данных экспорта из Altium Designer (возможна группировка по Designator при экспорте):
-![alt text](https://github.com/paralrk/DocGen/blob/master/Media/BOM%20в%20Excel.png)
+![alt text](https://github.com/paralrk/DocGen/blob/master/Media/BOM.png)
+
+Поля для экспорта можно переназначить в настройках приложения
