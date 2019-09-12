@@ -17,6 +17,9 @@
 - Заполнение основной надписи
 - Настройки генерации документов
 
+Файлы для установки:
+https://www.dropbox.com/sh/d06g5ztpo5god0l/AAAyZa0fCUEL5pAXjVfLNN4ta?dl=0
+
 Пример документа в режиме редактирования:
 
 ![alt text](https://github.com/paralrk/DocGen/blob/master/Media/Редактирование%20Excel.png)
