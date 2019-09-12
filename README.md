@@ -27,3 +27,6 @@ https://www.dropbox.com/sh/d06g5ztpo5god0l/AAAyZa0fCUEL5pAXjVfLNN4ta?dl=0
 Пример оформленного документа:
 
 ![alt text](https://github.com/paralrk/DocGen/blob/master/Media/Оформленный%20Excel.png)
+
+Пример данных экспорта из Altium Designer (возможна группировка по Designator при экспорте):
+![alt text](https://github.com/paralrk/DocGen/blob/master/Media/BOM%20в%20Excel.png)
