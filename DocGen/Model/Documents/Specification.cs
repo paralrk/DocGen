@@ -96,7 +96,7 @@ namespace DocGen.Model.Documents
                         row = AddName(partRows, c.Part.ManufacturerPartNumber);
                         row = AddName(partRows, c.Part.Description);
 
-                        row = AddNote(partRows, "", designators);
+                        row = AddNote(partRows, note, designators);
                     }
                     // print Name and Note without header  
                     else
@@ -115,6 +115,7 @@ namespace DocGen.Model.Documents
                     }
 
                     row.Quantity = c.Quantity;
+
                     Others.AddRange(partRows);
                     previous = c;
                     Others.Add(new RowSpec());
