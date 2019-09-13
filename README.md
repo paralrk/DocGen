@@ -1,4 +1,6 @@
 # DocGen
+![alt text](https://github.com/paralrk/DocGen/blob/master/Media/Вкладка%20DocGen.png)
+
 Надстройка для Excel, позволяющая автоматизировать процесс оформления Перечней элементов ПЭ3 и Спецификаций для печатных узлов. 
 
 В качестве исходных данных используется список BOM, экспортированный из Altium Designer. 
@@ -14,3 +16,19 @@
 - Оформление документов
 - Заполнение основной надписи
 - Настройки генерации документов
+
+Файлы для установки:
+https://www.dropbox.com/sh/d06g5ztpo5god0l/AAAyZa0fCUEL5pAXjVfLNN4ta?dl=0
+
+Пример документа в режиме редактирования:
+
+![alt text](https://github.com/paralrk/DocGen/blob/master/Media/Редактирование%20Excel.png)
+
+Пример оформленного документа:
+
+![alt text](https://github.com/paralrk/DocGen/blob/master/Media/Оформленный%20Excel.png)
+
+Пример данных экспорта из Altium Designer (возможна группировка по Designator при экспорте):
+![alt text](https://github.com/paralrk/DocGen/blob/master/Media/BOM.png)
+
+Поля для экспорта можно переназначить в настройках приложения
