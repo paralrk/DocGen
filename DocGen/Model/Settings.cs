@@ -30,6 +30,8 @@ namespace DocGen.Model
 
         public int MinPageForRegList { get; set; } = 3;
 
+        public int ColumnsWidth { get; set; } = 100;
+
 
         private static Settings instance;
 
@@ -64,6 +66,7 @@ namespace DocGen.Model
             LimitNoteRowSpec = 60;
             LimitNoteRowPE3 = 50;
             MinPageForRegList = 3;
+            ColumnsWidth = 100;
         }
     }
 }

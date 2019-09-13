@@ -16,7 +16,7 @@ using System.Diagnostics;
 
 namespace DocGen.Controller
 {
-    class RibbonController
+    public class RibbonController
     {
         private Excel.Range cell = null;
         private DocumentsFactory documentsfactory;
@@ -24,6 +24,7 @@ namespace DocGen.Controller
         private FormattersFactory formattersFactory;
         private UnformattersFactory unformattersFactory;
         private SheetBordersDrawer drawer;
+        private Excel.Worksheet sheet;
 
         IExporter pe3Exporter;
         IExporter specExporter;
@@ -207,6 +208,7 @@ namespace DocGen.Controller
         public void OpenSettings()
         {
             settingsForm = new SettingsForm();
+            settingsForm.Controller = this;
             settingsForm.ShowDialog();
         }
 
@@ -214,6 +216,20 @@ namespace DocGen.Controller
         {
             about = new AboutWindow();
             about.ShowDialog();
+        }
+
+        public void SetColumnsWidth(int widthScale)
+        {
+            sheet = (Excel.Worksheet)Globals.ThisAddIn.Application.ActiveSheet;
+            CellsSizeManager cellsManager = new CellsSizeManager();
+            cellsManager.SetColumnWidth(sheet, widthScale);
+        }
+
+        public void SetRowsHeight(int heightScale)
+        {
+            sheet = (Excel.Worksheet)Globals.ThisAddIn.Application.ActiveSheet;
+            CellsSizeManager cellsManager = new CellsSizeManager();
+            cellsManager.SetRowsHeight(sheet, heightScale);
         }
 
     }

@@ -59,10 +59,16 @@
             this.label11 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.regListUpDown = new System.Windows.Forms.NumericUpDown();
+            this.columnWidthUpDown = new System.Windows.Forms.NumericUpDown();
+            this.rowsHeightUpDown = new System.Windows.Forms.NumericUpDown();
             this.saveButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.defaultButton = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.setRowsHeightButton = new System.Windows.Forms.Button();
+            this.setColumnWidthButton = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -72,6 +78,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.startPositionUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupLimitSpecUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regListUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnWidthUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowsHeightUpDown)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -455,10 +463,60 @@
             0,
             0});
             // 
+            // columnWidthUpDown
+            // 
+            this.columnWidthUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.columnWidthUpDown.Location = new System.Drawing.Point(529, 22);
+            this.columnWidthUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.columnWidthUpDown.Maximum = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            this.columnWidthUpDown.Minimum = new decimal(new int[] {
+            80,
+            0,
+            0,
+            0});
+            this.columnWidthUpDown.Name = "columnWidthUpDown";
+            this.columnWidthUpDown.Size = new System.Drawing.Size(55, 24);
+            this.columnWidthUpDown.TabIndex = 9;
+            this.toolTip.SetToolTip(this.columnWidthUpDown, "От 80 до 150");
+            this.columnWidthUpDown.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // rowsHeightUpDown
+            // 
+            this.rowsHeightUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.rowsHeightUpDown.Location = new System.Drawing.Point(529, 118);
+            this.rowsHeightUpDown.Margin = new System.Windows.Forms.Padding(4);
+            this.rowsHeightUpDown.Maximum = new decimal(new int[] {
+            150,
+            0,
+            0,
+            0});
+            this.rowsHeightUpDown.Minimum = new decimal(new int[] {
+            80,
+            0,
+            0,
+            0});
+            this.rowsHeightUpDown.Name = "rowsHeightUpDown";
+            this.rowsHeightUpDown.Size = new System.Drawing.Size(55, 24);
+            this.rowsHeightUpDown.TabIndex = 14;
+            this.toolTip.SetToolTip(this.rowsHeightUpDown, "От 80 до 150");
+            this.rowsHeightUpDown.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
             // saveButton
             // 
             this.saveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.saveButton.Location = new System.Drawing.Point(765, 412);
+            this.saveButton.Location = new System.Drawing.Point(765, 508);
             this.saveButton.Margin = new System.Windows.Forms.Padding(4);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(141, 32);
@@ -470,7 +528,7 @@
             // cancelButton
             // 
             this.cancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cancelButton.Location = new System.Drawing.Point(915, 412);
+            this.cancelButton.Location = new System.Drawing.Point(915, 508);
             this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(141, 32);
@@ -482,7 +540,7 @@
             // defaultButton
             // 
             this.defaultButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.defaultButton.Location = new System.Drawing.Point(1064, 412);
+            this.defaultButton.Location = new System.Drawing.Point(1064, 508);
             this.defaultButton.Margin = new System.Windows.Forms.Padding(4);
             this.defaultButton.Name = "defaultButton";
             this.defaultButton.Size = new System.Drawing.Size(141, 32);
@@ -493,14 +551,64 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.setRowsHeightButton);
+            this.groupBox4.Controls.Add(this.setColumnWidthButton);
+            this.groupBox4.Controls.Add(this.label16);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.columnWidthUpDown);
+            this.groupBox4.Controls.Add(this.rowsHeightUpDown);
             this.groupBox4.Controls.Add(this.regListUpDown);
             this.groupBox4.Controls.Add(this.label14);
             this.groupBox4.Location = new System.Drawing.Point(12, 334);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(596, 100);
+            this.groupBox4.Size = new System.Drawing.Size(596, 207);
             this.groupBox4.TabIndex = 15;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Общие настройки";
+            // 
+            // setRowsHeightButton
+            // 
+            this.setRowsHeightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.setRowsHeightButton.Location = new System.Drawing.Point(287, 159);
+            this.setRowsHeightButton.Margin = new System.Windows.Forms.Padding(4);
+            this.setRowsHeightButton.Name = "setRowsHeightButton";
+            this.setRowsHeightButton.Size = new System.Drawing.Size(297, 34);
+            this.setRowsHeightButton.TabIndex = 16;
+            this.setRowsHeightButton.Text = "Изменить высоту строк";
+            this.setRowsHeightButton.UseVisualStyleBackColor = true;
+            this.setRowsHeightButton.Click += new System.EventHandler(this.SetRowsHeightButton_Click);
+            // 
+            // setColumnWidthButton
+            // 
+            this.setColumnWidthButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.setColumnWidthButton.Location = new System.Drawing.Point(287, 63);
+            this.setColumnWidthButton.Margin = new System.Windows.Forms.Padding(4);
+            this.setColumnWidthButton.Name = "setColumnWidthButton";
+            this.setColumnWidthButton.Size = new System.Drawing.Size(297, 34);
+            this.setColumnWidthButton.TabIndex = 13;
+            this.setColumnWidthButton.Text = "Изменить ширину столбцов";
+            this.setColumnWidthButton.UseVisualStyleBackColor = true;
+            this.setColumnWidthButton.Click += new System.EventHandler(this.SetColumnWidthButton_Click);
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.Location = new System.Drawing.Point(287, 109);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(225, 41);
+            this.label16.TabIndex = 15;
+            this.label16.Text = "Масштаб высоты строк, %";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.Location = new System.Drawing.Point(284, 13);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(228, 41);
+            this.label15.TabIndex = 10;
+            this.label15.Text = "Масштаб ширины столбцов, %";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label14
             // 
@@ -515,7 +623,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1213, 453);
+            this.ClientSize = new System.Drawing.Size(1213, 553);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.defaultButton);
             this.Controls.Add(this.cancelButton);
@@ -536,6 +644,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.startPositionUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupLimitSpecUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.regListUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.columnWidthUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rowsHeightUpDown)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -578,5 +688,11 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.NumericUpDown regListUpDown;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button setColumnWidthButton;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.NumericUpDown columnWidthUpDown;
+        private System.Windows.Forms.Button setRowsHeightButton;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown rowsHeightUpDown;
     }
 }

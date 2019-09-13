@@ -1,4 +1,5 @@
-﻿using DocGen.Model;
+﻿using DocGen.Controller;
+using DocGen.Model;
 using DocGen.Utils;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,9 @@ namespace DocGen.View
 {
     public partial class SettingsForm : Form
     {
-        SettingsFactory factory;
-        Settings settings;
+        private SettingsFactory factory;
+        private Settings settings;
+        public RibbonController Controller { get; set; }
         public SettingsForm()
         {
             InitializeComponent();
@@ -77,6 +79,16 @@ namespace DocGen.View
             this.positionIncUpDown.Value = settings.PositionInc;
 
             this.regListUpDown.Value = settings.MinPageForRegList;
+        }
+
+        private void SetColumnWidthButton_Click(object sender, EventArgs e)
+        {
+            Controller.SetColumnsWidth((int)columnWidthUpDown.Value);
+        }
+
+        private void SetRowsHeightButton_Click(object sender, EventArgs e)
+        {
+            Controller.SetRowsHeight((int)rowsHeightUpDown.Value);
         }
     }
 }
