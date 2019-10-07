@@ -36,7 +36,7 @@
     <PublishUrl>Publish\</PublishUrl>
     <InstallUrl>https://github.com/paralrk/DocGen/tree/master/DocGen/publish/</InstallUrl>
     <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.0.0.19</ApplicationVersion>
+    <ApplicationVersion>1.0.0.20</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
