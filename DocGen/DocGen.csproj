@@ -45,7 +45,7 @@
     <PublisherName>Romash Stanislav</PublisherName>
     <SupportUrl />
     <FriendlyName>DocGen</FriendlyName>
-    <OfficeApplicationDescription />
+    <OfficeApplicationDescription>Оформление документов по ЕСКД</OfficeApplicationDescription>
     <LoadBehavior>3</LoadBehavior>
   </PropertyGroup>
   <ItemGroup>
