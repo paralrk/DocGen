@@ -36,7 +36,7 @@
     <PublishUrl>Publish\</PublishUrl>
     <InstallUrl>https://raw.githubusercontent.com/paralrk/DocGen/master/DocGen/publish/</InstallUrl>
     <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.0.0.24</ApplicationVersion>
+    <ApplicationVersion>1.0.0.26</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -295,6 +295,7 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DocGenClassDiagram.cd" />
+    <None Include="DocGen_1_TemporaryKey.pfx" />
     <None Include="DocGen_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -383,11 +384,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestKeyFile>DocGen_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>1C0BC082F8A0E80A5F2D3A5C3BCB3968E519D4B8</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>6B1EB4E51A3068ED6A866D804F4A4DE550425D11</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
