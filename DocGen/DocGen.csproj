@@ -36,7 +36,7 @@
     <PublishUrl>Publish\</PublishUrl>
     <InstallUrl>https://raw.githubusercontent.com/paralrk/DocGen/master/DocGen/publish/</InstallUrl>
     <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.0.0.29</ApplicationVersion>
+    <ApplicationVersion>1.0.0.30</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -388,7 +388,16 @@
     <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>DocGen_1_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>DocGen_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DocGen_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>B2DF9F1D4D9CD117A4666CBD034B1092F4B9318F</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
