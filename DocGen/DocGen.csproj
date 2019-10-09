@@ -36,7 +36,7 @@
     <PublishUrl>Publish\</PublishUrl>
     <InstallUrl>https://raw.githubusercontent.com/paralrk/DocGen/master/DocGen/publish/</InstallUrl>
     <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.0.0.28</ApplicationVersion>
+    <ApplicationVersion>1.0.0.29</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -385,10 +385,10 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>DocGen_2_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>DocGen_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>B8355A03678E198187163BCD7159F1F6C4FCCCB1</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>1C0BC082F8A0E80A5F2D3A5C3BCB3968E519D4B8</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
