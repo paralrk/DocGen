@@ -2,11 +2,62 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DocGen.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="MinPageForRegList" Type="System.Int32" Scope="User">
+    <Setting Name="Designator" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Designator</Value>
+    </Setting>
+    <Setting Name="Type" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ValueType</Value>
+    </Setting>
+    <Setting Name="ManufacturerPartNumber" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ValueManufacturerPartNumber</Value>
+    </Setting>
+    <Setting Name="Description" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ValueDescription</Value>
+    </Setting>
+    <Setting Name="Manufacturer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ValueManufacturer</Value>
+    </Setting>
+    <Setting Name="Note" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Примечание</Value>
+    </Setting>
+    <Setting Name="Note1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Примечание 1</Value>
+    </Setting>
+    <Setting Name="Quantity" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Quantity</Value>
+    </Setting>
+    <Setting Name="GroupLimitPE3" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="GroupLimitSpec" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="StartPositionNumber" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="PositionInc" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="MaxNameLengthSpec" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">28</Value>
+    </Setting>
+    <Setting Name="MaxNoteLengthSpec" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">14</Value>
+    </Setting>
+    <Setting Name="MaxNameLengthPE3" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="LimitNoteRowSpec" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">60</Value>
     </Setting>
     <Setting Name="LimitNoteRowPE3" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="MinPageForRegList" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="ColumnsWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">100</Value>
     </Setting>
   </Settings>
 </SettingsFile>

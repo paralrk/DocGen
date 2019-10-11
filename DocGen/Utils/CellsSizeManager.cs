@@ -11,7 +11,6 @@ namespace DocGen.Utils
     class CellsSizeManager
     {
         public int ColumnsWidth { get; set; }
-        private Settings settings;
 
         public CellsSizeManager()
         {

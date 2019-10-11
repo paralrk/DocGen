@@ -25,13 +25,193 @@ namespace DocGen.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("3")]
-        public int MinPageForRegList {
+        [global::System.Configuration.DefaultSettingValueAttribute("Designator")]
+        public string Designator {
             get {
-                return ((int)(this["MinPageForRegList"]));
+                return ((string)(this["Designator"]));
             }
             set {
-                this["MinPageForRegList"] = value;
+                this["Designator"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ValueType")]
+        public string Type {
+            get {
+                return ((string)(this["Type"]));
+            }
+            set {
+                this["Type"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ValueManufacturerPartNumber")]
+        public string ManufacturerPartNumber {
+            get {
+                return ((string)(this["ManufacturerPartNumber"]));
+            }
+            set {
+                this["ManufacturerPartNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ValueDescription")]
+        public string Description {
+            get {
+                return ((string)(this["Description"]));
+            }
+            set {
+                this["Description"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ValueManufacturer")]
+        public string Manufacturer {
+            get {
+                return ((string)(this["Manufacturer"]));
+            }
+            set {
+                this["Manufacturer"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Примечание")]
+        public string Note {
+            get {
+                return ((string)(this["Note"]));
+            }
+            set {
+                this["Note"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Примечание 1")]
+        public string Note1 {
+            get {
+                return ((string)(this["Note1"]));
+            }
+            set {
+                this["Note1"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Quantity")]
+        public string Quantity {
+            get {
+                return ((string)(this["Quantity"]));
+            }
+            set {
+                this["Quantity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int GroupLimitPE3 {
+            get {
+                return ((int)(this["GroupLimitPE3"]));
+            }
+            set {
+                this["GroupLimitPE3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int GroupLimitSpec {
+            get {
+                return ((int)(this["GroupLimitSpec"]));
+            }
+            set {
+                this["GroupLimitSpec"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5")]
+        public int StartPositionNumber {
+            get {
+                return ((int)(this["StartPositionNumber"]));
+            }
+            set {
+                this["StartPositionNumber"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2")]
+        public int PositionInc {
+            get {
+                return ((int)(this["PositionInc"]));
+            }
+            set {
+                this["PositionInc"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("28")]
+        public int MaxNameLengthSpec {
+            get {
+                return ((int)(this["MaxNameLengthSpec"]));
+            }
+            set {
+                this["MaxNameLengthSpec"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("14")]
+        public int MaxNoteLengthSpec {
+            get {
+                return ((int)(this["MaxNoteLengthSpec"]));
+            }
+            set {
+                this["MaxNoteLengthSpec"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int MaxNameLengthPE3 {
+            get {
+                return ((int)(this["MaxNameLengthPE3"]));
+            }
+            set {
+                this["MaxNameLengthPE3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("60")]
+        public int LimitNoteRowSpec {
+            get {
+                return ((int)(this["LimitNoteRowSpec"]));
+            }
+            set {
+                this["LimitNoteRowSpec"] = value;
             }
         }
         
@@ -44,6 +224,30 @@ namespace DocGen.Properties {
             }
             set {
                 this["LimitNoteRowPE3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public int MinPageForRegList {
+            get {
+                return ((int)(this["MinPageForRegList"]));
+            }
+            set {
+                this["MinPageForRegList"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int ColumnsWidth {
+            get {
+                return ((int)(this["ColumnsWidth"]));
+            }
+            set {
+                this["ColumnsWidth"] = value;
             }
         }
     }

@@ -154,7 +154,6 @@ namespace DocGen.Model
             Components c = new Components();
             Part p = new Part();
             Excel.Range cells = (Excel.Range)bomSheet.Cells;
-            string cellValue2 = "";
             string designator = "";
 
             if (isDesignator)
