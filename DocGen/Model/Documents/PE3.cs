@@ -59,20 +59,21 @@ namespace DocGen.Model.Documents
                     row = new RowPE3();
                     rows.Add(row);
                     row.Designator = DesignatorShortener.Short(c.GetDesignatorsList());
+                    string description = null;
                     if (!String.IsNullOrEmpty(c.Part.Description))
                     {
-                        c.Part.Description = "(" + c.Part.Description + ")";
+                        description = "(" + c.Part.Description + ")";
                     }
                     if (group.IsInHeaders(c))
                     {
                         row = AddName(rows, c.Part.ManufacturerPartNumber);
-                        row = AddName(rows, c.Part.Description);
+                        row = AddName(rows, description);
                         //row.Name = c.Part.ManufacturerPartNumber + " " + c.Part.Description;
                     } else
                     {
                         row = AddName(rows, c.Part.Type);
                         row = AddName(rows, c.Part.ManufacturerPartNumber);
-                        row = AddName(rows, c.Part.Description);
+                        row = AddName(rows, description);
                         row = AddName(rows, c.Part.Manufacturer);
                         //row.Name = c.Part.Type + " " + c.Part.ManufacturerPartNumber +
                         //    " " + c.Part.Description + " " + c.Part.Manufacturer;
