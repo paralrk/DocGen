@@ -63,7 +63,8 @@ namespace DocGen.View.Unformatters
 
         virtual protected void ClearFormat()
         {
-            sheet.Cells.Style = "Normal";
+            sheet.Cells.Borders.LineStyle = Excel.XlLineStyle.xlLineStyleNone;
+            // sheet.Cells.Style = "Normal";
         }
 
         virtual protected void UnmergeCells()

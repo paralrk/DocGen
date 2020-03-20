@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,21 +15,27 @@ using DocGen.Model.Documents;
 
 namespace DocGen.Model.Documents
 {
-    abstract class Document
+    abstract class SWDocument : IDocument
     {
-        private List<Components> bom;
-        protected ComponentList componentList;
+        private List<SWComponents> bom;
+        //protected ComponentList componentList;
         protected List<string> notes;
         protected Settings settings;
-        public bool IsGenerated { get; private set; } = false;
+        public bool isGenerated = false;
 
         protected int maxNoteLength = 14;
         protected int limitNoteRow = 60;
 
-        BOMReader bomReader;
-        GroupFiller filler;
+        SWBOMReader bomReader;
+		
+		private List<List<SWComponents>> groups = new List<List<SWComponents>>();
+		private List<SWComponents> assemblies;
+		private List<SWComponents> parts;
+		private List<SWComponents> standartParts;
+		private List<SWComponents> otherParts;
+		private List<SWComponents> matetials;
 
-        public Document ()
+        public SWDocument ()
         {
             SettingsFactory factory = new SettingsFactory();
             this.settings = factory.GetSettings();
@@ -39,95 +46,76 @@ namespace DocGen.Model.Documents
             ReadBOM();
             if (bom != null)
             {
-                SortBOM();
                 FillGroups();
                 SortGroups();
-                CombineComponents();
                 CreateNotes();
-                FillDocumentRows();
-                CombineRows();
-                IsGenerated = true;
+                FillDocumentRows(assemblies, "Сборочные единицы");
+				FillDocumentRows(parts, "Детали");
+				FillDocumentRows(standartParts, "Стандартные изделия");
+				FillDocumentRows(otherParts, "Прочие изделия");
+				FillDocumentRows(matetials, "Материалы");
+                GenerateNotes();
+                //CombineRows();
+                isGenerated = true;
             }
         }
 
         private void ReadBOM()
         {
-            bomReader = new BOMReader();
+            bomReader = new SWBOMReader();
             bom = bomReader.ReadBOM();
         }
-        private void SortBOM()
-        {
-            bom.Sort(new DesignatorComparer());
-        }
 
-        private void FillGroups()
+        protected virtual void FillGroups()
         {
-            filler = new GroupFiller();
-            componentList = new ComponentList();
-            componentList.Groups = filler.FillGroups(bom);
+            //assemblies = bom.ToList();
+            assemblies = bom.Where(c => c.DocumentSection.Equals("Сборочные единицы")).ToList();
+            parts = bom.Where(c => c.DocumentSection.Equals("Детали")).ToList();
+			standartParts = bom.Where(c => c.DocumentSection.Equals("Стандартные изделия")).ToList();
+            otherParts = bom.Where(c => c.DocumentSection.Equals("Прочие изделия")).ToList();
+            matetials = bom.Where(c => c.DocumentSection.Equals("Материалы")).ToList();
+			
+			groups.Add(assemblies);
+			groups.Add(parts);
+			groups.Add(standartParts);
+			groups.Add(otherParts);
+			groups.Add(matetials);
         }
 
         protected virtual void SortGroups()
         {
+			assemblies = assemblies.OrderBy(c => c.Designation).ToList();
+			parts = parts.OrderBy(c => c.Designation).ToList();
+			standartParts = standartParts.OrderBy(c => c.Name).ToList();
+			otherParts = otherParts.OrderBy(c => c.Name).ToList();
+			matetials = matetials.OrderBy(c => c.Name).ToList();
         }
 
-        protected virtual void CombineComponents()
-        {
-            foreach (Model.Group group in componentList.Groups)
-            {
-                List<Components> combined = new List<Components>();
-                Components last = null;
-                foreach (Components c in group.CList)
-                {
-                    if (last == null)
-                    {
-                        last = c;
-                    }
-                    else if (last.Part.ManufacturerPartNumber.
-                      Equals(c.Part.ManufacturerPartNumber))
-                    {
-                        last.AddComponent(c);
-                    }
-                    else
-                    {
-                        combined.Add(last);
-                        last = c;
-                    }
-                }
-                combined.Add(last);
-                group.CList = combined;
-            }
-        }
 
         private void CreateNotes()
         {
             notes = new List<string>();
-            foreach (Model.Group group in componentList.Groups)
+            foreach (List<SWComponents> group in groups)
             {
-                foreach (Components c in group.CList)
+                foreach (SWComponents c in group)
                 {
-                    if (!String.IsNullOrEmpty(c.Part.Note))
+                    if (!String.IsNullOrEmpty(c.Replacement))
                     {
-                        if (!notes.Contains(c.Part.Note))
+                        if (!notes.Contains(c.Replacement))
                         {
-                            notes.Add(c.Part.Note);
+                            notes.Add(c.Replacement);
                         }
-                        c.NoteNumber = notes.IndexOf(c.Part.Note) + 1;
-                    }
-
-                    if (!String.IsNullOrEmpty(c.Part.Note1))
-                    {
-                        if (!notes.Contains(c.Part.Note1))
-                        {
-                            notes.Add(c.Part.Note1);
-                        }
-                        c.NoteNumber1 = notes.IndexOf(c.Part.Note1) + 1;
+                        c.ReplacementNumber = notes.IndexOf(c.Replacement) + 1;
                     }
                 }
             }
         }
 
-        protected virtual void FillDocumentRows()
+        protected virtual void GenerateNotes()
+        {
+        }
+
+        protected virtual void FillDocumentRows(List<SWComponents> group, String section)
         {
         }
 
@@ -174,12 +162,10 @@ namespace DocGen.Model.Documents
             return matchList.Cast<Match>().Select(match => match.Value).ToArray();
         }
 
-        internal ComponentList ComponentList
+        public bool IsGenerated()
         {
-            get => default;
-            set
-            {
-            }
+            return isGenerated;
         }
+
     }
 }

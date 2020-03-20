@@ -12,7 +12,7 @@ using DocGen.Model.Documents;
 
 namespace DocGen.Model.Documents
 {
-    class PE3 : Document
+    class PE3 : AltiumDocument
     {
         private List<RowPE3> rows = new List<RowPE3>();
 

@@ -60,7 +60,11 @@ namespace DocGen.View.EmptyDocuments
 
         }
 
-        protected virtual void FormatCells()
+        public virtual void FormatCells()
+        {
+        }
+
+        public virtual void InitFormatCells()
         {
             Excel.Style style = StyleHelper.getDocGenMainStyle();
             sheet.Cells.Style = style;

@@ -12,7 +12,7 @@ namespace DocGen.Model.Exporters
 {
     class SpecificationExporter : IExporter
     {
-        public void Export(Document spec)
+        public void Export(IDocument spec)
         {
             ExcelHelper.DisableUpdating();
 

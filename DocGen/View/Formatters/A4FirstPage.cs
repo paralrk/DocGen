@@ -133,35 +133,6 @@ namespace DocGen.View.Formatters
             range = sheet.Range["Y1:Z1"];
             column = range.EntireColumn;
             column.ColumnWidth = 4.3; //10 mm
-
-            // 125% (120DPI) display scaling
-            //string str = "A1" + sep + "F1" + sep + "K1:L1" + sep + "O1" + sep + "S1:X1";
-            //range = sheet.Range[str];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 1.7; // 5mm
-            //str = "B1:D1" + sep + "M1:N1";
-            //range = sheet.Range[str];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 2.5; // 7mm
-            //range = sheet.Range["E1"];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 0.92; // 3mm
-            //range = sheet.Range["G1:I1"];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 3.5; // 9mm
-            //range = sheet.Range["J1"];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 2; // 6mm
-            //str = "P1" + sep + "R1";
-            //range = sheet.Range[str];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 5.9; // 14mm
-            //range = sheet.Range["Q1"];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 10; // 23mm
-            //range = sheet.Range["Y1:Z1"];
-            //column = range.EntireColumn;
-            //column.ColumnWidth = 3.9; //10 mm
         }
         virtual protected void MergeCells()
         {

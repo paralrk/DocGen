@@ -98,9 +98,9 @@ namespace DocGen.View.Formatters
             sheet.Range["M36:R36"].Font.Size = 12;
             // text align
             sheet.Range["C1:Z1"].VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
-            sheet.Range["C2:Z24"].VerticalAlignment = Excel.XlVAlign.xlVAlignBottom;
+            // sheet.Range["C2:Z24"].VerticalAlignment = Excel.XlVAlign.xlVAlignBottom;
             sheet.Range["C1:Z24"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            sheet.Range["H2:T24"].HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
+            // sheet.Range["H2:T24"].HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
 
             sheet.Range["C2:Z24"].ShrinkToFit = true;
         }

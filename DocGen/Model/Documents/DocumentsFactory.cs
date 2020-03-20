@@ -10,14 +10,19 @@ namespace DocGen.Model.Documents
 {
     class DocumentsFactory
     {
-        public Document GetPE3Document()
+        public IDocument GetPE3Document()
         {
             return new PE3();
         }
 
-        public Document GetSpecificationDocument()
+        public IDocument GetSpecificationDocument()
         {
             return new Specification();
+        }
+
+        public IDocument GetSWSpecificationDocument()
+        {
+            return new SWSpecification();
         }
     }
 }

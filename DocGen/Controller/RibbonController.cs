@@ -56,9 +56,9 @@ namespace DocGen.Controller
 
         public void GeneratePE3()
         {
-            Document document = documentsfactory.GetPE3Document();
+            IDocument document = documentsfactory.GetPE3Document();
             document.Generate();
-            if (document.IsGenerated)
+            if (document.IsGenerated())
             {
                 pe3Exporter.Export(document);
             }
@@ -67,9 +67,19 @@ namespace DocGen.Controller
 
         public void GenerateSpecification()
         {
-            Document document = documentsfactory.GetSpecificationDocument();
+            IDocument document = documentsfactory.GetSpecificationDocument();
             document.Generate();
-            if (document.IsGenerated)
+            if (document.IsGenerated())
+            {
+                specExporter.Export(document);
+            }
+        }
+
+        public void GenerateSWSpecification()
+        {
+            IDocument document = documentsfactory.GetSWSpecificationDocument();
+            document.Generate();
+            if (document.IsGenerated())
             {
                 specExporter.Export(document);
             }
@@ -79,6 +89,7 @@ namespace DocGen.Controller
         {
             EmptyDocument emptyPE3 = emptyDocumentsFactory.GetPE3EmptyDocument();
             emptyPE3.NewDocument();
+            emptyPE3.InitFormatCells();
             emptyPE3.Format();
         }
 
@@ -87,7 +98,10 @@ namespace DocGen.Controller
             EmptyDocument emptySpec = emptyDocumentsFactory.GetSpecificationEmptyDocument();
             emptySpec.NewDocument();
             emptySpec.Format();
+            emptySpec.InitFormatCells();
+
         }
+
 
         public void EditDocument()
         {

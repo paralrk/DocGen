@@ -67,12 +67,12 @@ namespace DocGen.View.Formatters
             // text align
             sheet.Range[sheet.Cells[firstRow, 3], sheet.Cells[firstRow, 26]].
                 VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
-            sheet.Range[sheet.Cells[firstRow + 1, 4], sheet.Cells[firstRow + 29, 26]].
-                VerticalAlignment = Excel.XlVAlign.xlVAlignBottom;
-            sheet.Range[sheet.Cells[firstRow + 1, 4], sheet.Cells[firstRow + 29, 26]].
-                HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            sheet.Range[sheet.Cells[firstRow + 1, 8], sheet.Cells[firstRow + 29, 20]].
-                HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
+            //sheet.Range[sheet.Cells[firstRow + 1, 4], sheet.Cells[firstRow + 29, 26]].
+            //    VerticalAlignment = Excel.XlVAlign.xlVAlignBottom;
+            //sheet.Range[sheet.Cells[firstRow + 1, 4], sheet.Cells[firstRow + 29, 26]].
+            //    HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            //sheet.Range[sheet.Cells[firstRow + 1, 8], sheet.Cells[firstRow + 29, 20]].
+            //    HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
 
             sheet.Range[sheet.Cells[firstRow + 1, 3], sheet.Cells[firstRow + 29, 26]].
                 ShrinkToFit = true;

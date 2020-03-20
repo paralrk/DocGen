@@ -10,6 +10,7 @@ namespace DocGen.Model
     [Serializable]
     class Settings
     {
+        // Altium Designer
         public string Designator { get; set; } = "Designator";
         public string Type { get; set; } = "ValueType";
         public string ManufacturerPartNumber { get; set; } = "ValueManufacturerPartNumber";
@@ -18,6 +19,19 @@ namespace DocGen.Model
         public string Note { get; set; } = "Примечание";
         public string Note1 { get; set; } = "Примечание 1";
         public string Quantity { get; set; } = "Quantity";
+
+        // Solidworks
+        public string SWFormat { get; set; } = "Формат";
+        public string SWPosition { get; set; } = "Позиция";
+        public string SWDesignation { get; set; } = "Обозначение";
+        public string SWName { get; set; } = "Наименование";
+        public string SWQuantity { get; set; } = "Количество";
+        public string SWNote { get; set; } = "Примечание";
+        public string SWDocumentSection { get; set; } = "Раздел";
+        public string SWClass { get; set; } = "Класс";
+        public string SWGost { get; set; } = "ГОСТ";
+        public string SWSizesParametres { get; set; } = "Размеры и параметры";
+        public string SWReplacement { get; set; } = "Доп. замена";
         public int GroupLimitPE3 { get; set; } = 5;
         public int GroupLimitSpec { get; set; } = 3;
         public int StartPositionNumber { get; set; } = 5;

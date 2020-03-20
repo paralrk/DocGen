@@ -35,9 +35,19 @@ namespace DocGen.View.EmptyDocuments
             column.ColumnWidth = 13.5;
         }
 
-        protected override void FormatCells()
+        public override void FormatCells()
         {
             base.FormatCells();
+            sheet.Range[sheet.Cells[1, 1], sheet.Cells[1, 5]].
+                HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            ((Excel.Range)sheet.Cells.Rows[1]).VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            ((Excel.Range)sheet.Cells[1, 1]).Orientation = 90;
+
+        }
+
+        public override void InitFormatCells()
+        {
+            base.InitFormatCells();
             ((Excel.Range)sheet.Cells).HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
             ((Excel.Range)sheet.Columns[3]).HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
             ((Excel.Range)sheet.Cells[1, 3]).HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;

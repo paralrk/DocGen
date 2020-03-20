@@ -10,6 +10,6 @@ namespace DocGen.Model.Exporters
 {
     interface IExporter
     {
-        void Export(Document doc);
+        void Export(IDocument doc);
     }
 }

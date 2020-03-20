@@ -10,7 +10,7 @@ using DocGen.Utils;
 
 namespace DocGen.Model.Documents
 {
-    class Specification : Document
+    class Specification : AltiumDocument
     {
         //public List<RowSpec> Documents { get; private set; } = new List<RowSpec>();
         //private List<RowSpec> assemblies;
