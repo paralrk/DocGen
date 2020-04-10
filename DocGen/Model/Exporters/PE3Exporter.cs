@@ -18,6 +18,7 @@ namespace DocGen.Model.Exporters
 
             EmptyDocument pe3Empty = new PE3EmptyDocument();
             pe3Empty.NewDocument();
+            pe3Empty.InitFormatCells();
             pe3Empty.Format();
             Excel.Worksheet sheet = pe3Empty.getSheet();
 

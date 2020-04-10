@@ -190,10 +190,14 @@
   -->
   <ItemGroup>
     <Compile Include="Controller\RibbonController.cs" />
+    <Compile Include="Model\Documents\Comparers\VPComparer.cs" />
     <Compile Include="Model\Documents\DocumentsFactory.cs" />
     <Compile Include="Model\Documents\IDocument.cs" />
+    <Compile Include="Model\Documents\RowVP.cs" />
     <Compile Include="Model\Documents\SWDocument.cs" />
     <Compile Include="Model\Documents\SWSpecification.cs" />
+    <Compile Include="Model\Documents\VP.cs" />
+    <Compile Include="Model\Exporters\VPExporter.cs" />
     <Compile Include="Model\SWBOMReader.cs" />
     <Compile Include="Model\SWComponents.cs" />
     <Compile Include="Model\Documents\Templates\DocumentsSection.cs" />
@@ -232,6 +236,7 @@
     <Compile Include="View\EmptyDocuments\EmptyDocumentsFactory.cs" />
     <Compile Include="View\EmptyDocuments\PE3EmptyDocument.cs" />
     <Compile Include="View\EmptyDocuments\SpecEmptyDocument.cs" />
+    <Compile Include="View\EmptyDocuments\VPEmptyDocument.cs" />
     <Compile Include="View\Formatters\A4FirstPage.cs" />
     <Compile Include="View\Formatters\A4SecondPage.cs" />
     <Compile Include="Model\BOMReader.cs" />

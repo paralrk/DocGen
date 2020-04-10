@@ -19,6 +19,7 @@ namespace DocGen.Model.Exporters
             EmptyDocumentsFactory factory = new EmptyDocumentsFactory();
             EmptyDocument specEmpty = factory.GetSpecificationEmptyDocument();
             specEmpty.NewDocument();
+            specEmpty.InitFormatCells();
             specEmpty.Format();
             Excel.Worksheet sheet = specEmpty.getSheet();
 

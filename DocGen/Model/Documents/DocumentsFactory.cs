@@ -20,6 +20,11 @@ namespace DocGen.Model.Documents
             return new Specification();
         }
 
+        public IDocument GetVPDocument()
+        {
+            return new VP();
+        }
+
         public IDocument GetSWSpecificationDocument()
         {
             return new SWSpecification();

@@ -32,6 +32,11 @@ namespace DocGen
             controller.GenerateSpecification();
         }
 
+        private void VPButton_Click(object sender, RibbonControlEventArgs e)
+        {
+            controller.GenerateVP();
+        }
+
         private void SWSpecButton_Click(object sender, RibbonControlEventArgs e)
         {
             controller.GenerateSWSpecification();
@@ -48,8 +53,10 @@ namespace DocGen
             controller.NewSpecification();
         }
 
-
-
+        private void NewVPButton_Click(object sender, RibbonControlEventArgs e)
+        {
+            controller.NewVP();
+        }
 
         private void EditButton_Click(object sender, RibbonControlEventArgs e)
         {
@@ -92,7 +99,6 @@ namespace DocGen
                 controller.DisableSheetBorders();
             }
         }
-
 
     }
 }

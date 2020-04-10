@@ -16,7 +16,7 @@ namespace DocGen.Model.Documents
 {
     abstract class AltiumDocument : IDocument
     {
-        private List<Components> bom;
+        protected List<Components> bom;
         protected ComponentList componentList;
         protected List<string> notes;
         protected Settings settings;
@@ -55,7 +55,7 @@ namespace DocGen.Model.Documents
             bomReader = new BOMReader();
             bom = bomReader.ReadBOM();
         }
-        private void SortBOM()
+        protected virtual void SortBOM()
         {
             bom.Sort(new DesignatorComparer());
         }

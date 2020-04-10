@@ -19,6 +19,8 @@ namespace DocGen.View.EmptyDocuments
                     return new PE3EmptyDocument();
                 case "Спецификация":
                     return new SpecEmptyDocument();
+                case "Ведомость покупных изделий":
+                    return new VPEmptyDocument();
                 default:
                     return new PE3EmptyDocument();
             }
@@ -32,6 +34,11 @@ namespace DocGen.View.EmptyDocuments
         public EmptyDocument GetSpecificationEmptyDocument()
         {
             return new SpecEmptyDocument();
+        }
+
+        public EmptyDocument GetVPEmptyDocument()
+        {
+            return new VPEmptyDocument();
         }
     }
 }

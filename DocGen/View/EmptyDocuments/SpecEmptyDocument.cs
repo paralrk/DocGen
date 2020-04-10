@@ -43,7 +43,8 @@ namespace DocGen.View.EmptyDocuments
             base.FormatCells();
             sheet.Range[sheet.Cells[1, 1], sheet.Cells[1, 7]].
                 HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            ((Excel.Range)sheet.Cells.Rows[1]).VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            ((Excel.Range)sheet.Cells.Rows[1]).
+                VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
             sheet.Range[sheet.Cells[1, 1], sheet.Cells[1, 3]].Orientation = 90;
             ((Excel.Range)sheet.Cells[1, 6]).Orientation = 90;
         }
@@ -54,11 +55,7 @@ namespace DocGen.View.EmptyDocuments
             ((Excel.Range)sheet.Cells).HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
             ((Excel.Range)sheet.Columns[4]).HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
             ((Excel.Range)sheet.Columns[5]).HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
-            sheet.Range[sheet.Cells[1, 1], sheet.Cells[1, 7]].
-                HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            ((Excel.Range)sheet.Cells.Rows[1]).VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
-            sheet.Range[sheet.Cells[1, 1], sheet.Cells[1, 3]].Orientation = 90;
-            ((Excel.Range)sheet.Cells[1, 6]).Orientation = 90;
+            FormatCells();
         }
 
         protected override void FillTitle()

@@ -28,6 +28,7 @@ namespace DocGen.Controller
 
         IExporter pe3Exporter;
         IExporter specExporter;
+        IExporter vpExporter;
 
         BlankForm blankForm;
         SettingsForm settingsForm;
@@ -39,7 +40,6 @@ namespace DocGen.Controller
             Editing = 1,
             Formatted = 2,
             NotDocument = 3
-
         }
 
         public RibbonController()
@@ -51,6 +51,7 @@ namespace DocGen.Controller
             this.drawer = new SheetBordersDrawer();
             this.pe3Exporter = new PE3Exporter();
             this.specExporter = new SpecificationExporter();
+            this.vpExporter = new VPExporter();
             Globals.ThisAddIn.Application.SheetActivate += Application_SheetActivate;
         }
 
@@ -72,6 +73,18 @@ namespace DocGen.Controller
             if (document.IsGenerated())
             {
                 specExporter.Export(document);
+            }
+        }
+
+        public void GenerateVP()
+        {
+            Debug.WriteLine("Start generating VP");
+            IDocument document = documentsfactory.GetVPDocument();
+            document.Generate();
+            Debug.WriteLine("VP is generated");
+            if (document.IsGenerated())
+            {
+                vpExporter.Export(document);
             }
         }
 
@@ -97,8 +110,16 @@ namespace DocGen.Controller
         {
             EmptyDocument emptySpec = emptyDocumentsFactory.GetSpecificationEmptyDocument();
             emptySpec.NewDocument();
-            emptySpec.Format();
             emptySpec.InitFormatCells();
+            emptySpec.Format();
+        }
+
+        public void NewVP()
+        {
+            EmptyDocument emptyVP = emptyDocumentsFactory.GetVPEmptyDocument();
+            emptyVP.NewDocument();
+            emptyVP.InitFormatCells();
+            emptyVP.Format();
 
         }
 

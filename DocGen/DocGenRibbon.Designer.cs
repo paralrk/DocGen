@@ -39,11 +39,11 @@
             this.DocumentsGroup = this.Factory.CreateRibbonGroup();
             this.PE3Button = this.Factory.CreateRibbonButton();
             this.SpecButton = this.Factory.CreateRibbonButton();
-            this.SWDocumentsGroup = this.Factory.CreateRibbonGroup();
-            this.SWSpecButton = this.Factory.CreateRibbonButton();
+            this.VPButton = this.Factory.CreateRibbonButton();
             this.NewDocumentsGroup = this.Factory.CreateRibbonGroup();
             this.NewPE3Button = this.Factory.CreateRibbonButton();
             this.NewSpecificationButton = this.Factory.CreateRibbonButton();
+            this.NewVPButton = this.Factory.CreateRibbonButton();
             this.EditGroup = this.Factory.CreateRibbonGroup();
             this.EditButton = this.Factory.CreateRibbonButton();
             this.FormatButton = this.Factory.CreateRibbonButton();
@@ -53,13 +53,15 @@
             this.SettingsGroup = this.Factory.CreateRibbonGroup();
             this.SettingsButton = this.Factory.CreateRibbonButton();
             this.AboutButton = this.Factory.CreateRibbonButton();
+            this.SWDocumentsGroup = this.Factory.CreateRibbonGroup();
+            this.SWSpecButton = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.DocGenTab.SuspendLayout();
             this.DocumentsGroup.SuspendLayout();
-            this.SWDocumentsGroup.SuspendLayout();
             this.NewDocumentsGroup.SuspendLayout();
             this.EditGroup.SuspendLayout();
             this.SettingsGroup.SuspendLayout();
+            this.SWDocumentsGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // tab1
@@ -82,6 +84,7 @@
             // 
             this.DocumentsGroup.Items.Add(this.PE3Button);
             this.DocumentsGroup.Items.Add(this.SpecButton);
+            this.DocumentsGroup.Items.Add(this.VPButton);
             this.DocumentsGroup.Label = "Документы из Altium Designer";
             this.DocumentsGroup.Name = "DocumentsGroup";
             // 
@@ -97,23 +100,17 @@
             this.SpecButton.Name = "SpecButton";
             this.SpecButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.SpecButton_Click);
             // 
-            // SWDocumentsGroup
+            // VPButton
             // 
-            this.SWDocumentsGroup.Items.Add(this.SWSpecButton);
-            this.SWDocumentsGroup.Label = "Документы из SolidWorks";
-            this.SWDocumentsGroup.Name = "SWDocumentsGroup";
-            this.SWDocumentsGroup.Visible = false;
-            // 
-            // SWSpecButton
-            // 
-            this.SWSpecButton.Label = "SW -> Специфицация";
-            this.SWSpecButton.Name = "SWSpecButton";
-            this.SWSpecButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.SWSpecButton_Click);
+            this.VPButton.Label = "BOM -> Ведомость покупных изделий";
+            this.VPButton.Name = "VPButton";
+            this.VPButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.VPButton_Click);
             // 
             // NewDocumentsGroup
             // 
             this.NewDocumentsGroup.Items.Add(this.NewPE3Button);
             this.NewDocumentsGroup.Items.Add(this.NewSpecificationButton);
+            this.NewDocumentsGroup.Items.Add(this.NewVPButton);
             this.NewDocumentsGroup.Label = "Новые документы";
             this.NewDocumentsGroup.Name = "NewDocumentsGroup";
             // 
@@ -128,6 +125,12 @@
             this.NewSpecificationButton.Label = "Спецификация";
             this.NewSpecificationButton.Name = "NewSpecificationButton";
             this.NewSpecificationButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.NewSpecificationButton_Click);
+            // 
+            // NewVPButton
+            // 
+            this.NewVPButton.Label = "Ведомость покупных изделий";
+            this.NewVPButton.Name = "NewVPButton";
+            this.NewVPButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.NewVPButton_Click);
             // 
             // EditGroup
             // 
@@ -188,6 +191,19 @@
             this.AboutButton.Name = "AboutButton";
             this.AboutButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.AboutButton_Click);
             // 
+            // SWDocumentsGroup
+            // 
+            this.SWDocumentsGroup.Items.Add(this.SWSpecButton);
+            this.SWDocumentsGroup.Label = "Документы из SolidWorks";
+            this.SWDocumentsGroup.Name = "SWDocumentsGroup";
+            this.SWDocumentsGroup.Visible = false;
+            // 
+            // SWSpecButton
+            // 
+            this.SWSpecButton.Label = "SW -> Специфицация";
+            this.SWSpecButton.Name = "SWSpecButton";
+            this.SWSpecButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.SWSpecButton_Click);
+            // 
             // DocGenRibbon
             // 
             this.Name = "DocGenRibbon";
@@ -201,14 +217,14 @@
             this.DocGenTab.PerformLayout();
             this.DocumentsGroup.ResumeLayout(false);
             this.DocumentsGroup.PerformLayout();
-            this.SWDocumentsGroup.ResumeLayout(false);
-            this.SWDocumentsGroup.PerformLayout();
             this.NewDocumentsGroup.ResumeLayout(false);
             this.NewDocumentsGroup.PerformLayout();
             this.EditGroup.ResumeLayout(false);
             this.EditGroup.PerformLayout();
             this.SettingsGroup.ResumeLayout(false);
             this.SettingsGroup.PerformLayout();
+            this.SWDocumentsGroup.ResumeLayout(false);
+            this.SWDocumentsGroup.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -234,6 +250,8 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonCheckBox sheetBordersCheckBox;
         internal Microsoft.Office.Tools.Ribbon.RibbonGroup SWDocumentsGroup;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton SWSpecButton;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton NewVPButton;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton VPButton;
     }
 
     partial class ThisRibbonCollection
