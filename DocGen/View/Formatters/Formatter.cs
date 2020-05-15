@@ -39,26 +39,15 @@ namespace DocGen.View.Formatters
 
             ExcelHelper.DisableUpdating();
 
-            Debug.WriteLine("Formatting document");
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
             GenerateFirstPage();
-            sw.Stop();
-            Debug.WriteLine("GenerateFirstPage() Elapsed={0}", sw.Elapsed);
 
             while (currentRowData < usedRows)
             {
-                sw.Start();
                 GenerateSecondPage();
-                sw.Stop();
-                Debug.WriteLine("GenerateSecondPage() Elapsed={0}", sw.Elapsed);
             }
             if (isRegistrationList && pageNumber > minPageForRegList)
             {
-                sw.Start();
                 GenerateRegistrationPage();
-                sw.Stop();
-                Debug.WriteLine("GenerateRegistrationPage() Elapsed={0}", sw.Elapsed);
             }
 
             ExcelHelper.SetPrintSettings(sheet);

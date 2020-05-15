@@ -20,6 +20,8 @@ namespace DocGen.View.Unformatters
                     return new PE3Unformatter();
                 case "Спецификация":
                     return new SpecUnformatter();
+                case "Ведомость покупных изделий":
+                    return new VPUnformatter();
                 default:
                     return null;
             }

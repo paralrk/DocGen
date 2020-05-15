@@ -23,7 +23,7 @@ namespace DocGen.Model.Exporters
             vpEmpty.Format();
             Excel.Worksheet sheet = vpEmpty.getSheet();
 
-            int rowNumber = 3;
+            int rowNumber = 4;
             List<IRow> rows = vp.CombineRows();
 
             foreach (RowVP row in rows)

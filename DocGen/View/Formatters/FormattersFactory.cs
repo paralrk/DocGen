@@ -20,6 +20,8 @@ namespace DocGen.View.Formatters
                     return new PE3Formatter();
                 case "Спецификация":
                     return new SpecFormatter();
+                case "Ведомость покупных изделий":
+                    return new VPFormatter();
                 default:
                     return null;
             }

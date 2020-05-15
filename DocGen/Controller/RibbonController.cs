@@ -78,10 +78,8 @@ namespace DocGen.Controller
 
         public void GenerateVP()
         {
-            Debug.WriteLine("Start generating VP");
             IDocument document = documentsfactory.GetVPDocument();
             document.Generate();
-            Debug.WriteLine("VP is generated");
             if (document.IsGenerated())
             {
                 vpExporter.Export(document);
@@ -123,7 +121,6 @@ namespace DocGen.Controller
 
         }
 
-
         public void EditDocument()
         {
             if (CheckState() == States.Formatted)
@@ -133,6 +130,11 @@ namespace DocGen.Controller
                 if (unformatter != null)
                 {
                     unformatter.Unformat();
+                }
+                if (isBordersEnabled)
+                {
+                    drawer.EnableSheetChangeEvent();
+                    drawer.DrawSheetBorders();
                 }
             }
 
@@ -146,19 +148,9 @@ namespace DocGen.Controller
                 Formatter formatter = formattersFactory.GetFormatter();
                 if (formatter != null)
                 {
-                    Debug.WriteLine("FormatDocument method");
-                    Stopwatch sw = new Stopwatch();
-
-                    sw.Start();
                     drawer.DeleteSheetBorders();
-                    sw.Stop();
-                    Debug.WriteLine("DeleteSheetBorders() Elapsed={0}", sw.Elapsed);
-
-                    sw.Reset();
-                    sw.Start();
+                    drawer.DisableSheetChangeEvent();
                     formatter.Format();
-                    sw.Stop();
-                    Debug.WriteLine("Format Elapsed={0}", sw.Elapsed);
                 }
             }
             else
@@ -205,18 +197,10 @@ namespace DocGen.Controller
             //sheet = (Excel.Worksheet)Sh;
             if (SheetHelper.isExisting("Содержание"))
             {
-                if (CheckState() == States.Editing)
+                if (CheckState() == States.Editing && isBordersEnabled)
                 {
-                    if (isBordersEnabled)
-                    {
-                        drawer.EnableSheetChangeEvent();
-                        drawer.DrawSheetBorders();
-                    }
-                    else
-                    {
-                        drawer.DisableSheetChangeEvent();
-                        drawer.DeleteSheetBorders();
-                    }
+                    drawer.EnableSheetChangeEvent();
+                    drawer.DrawSheetBorders();
                 }
             }
         }
@@ -230,7 +214,7 @@ namespace DocGen.Controller
                 return States.NotDocument;
             }
 
-            cell = (Excel.Range)sheet.Cells[1, 1];
+            cell = (Excel.Range)sheet.Cells[3, 1];
             if ((bool)cell.MergeCells)
             {
                 return States.Formatted;

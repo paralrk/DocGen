@@ -15,7 +15,7 @@ namespace DocGen.View
         private int secondPageRows = 29;
         private int columnsCount = 5;
         Excel.Worksheet sheet;
-        private static int previousRowsCount = 0;
+        private int previousRowsCount = 0;
 
         public SheetBordersDrawer()
         {
@@ -37,6 +37,11 @@ namespace DocGen.View
                     secondPageRows = 29;
                     columnsCount = 7;
                     break;
+                case "Ведомость покупных изделий":
+                    firstPageRows = 24;
+                    secondPageRows = 28;
+                    columnsCount = 11;
+                    break;
                 default:
                     break;
             }
@@ -44,25 +49,9 @@ namespace DocGen.View
 
         public void EnableSheetChangeEvent()
         {
-            Debug.WriteLine("EnableSheetChangeEvent method");
-            Stopwatch sw = new Stopwatch();
-
-            sw.Start();
             Initialize();
-            sw.Stop();
-            Debug.WriteLine("Initialize() Elapsed={0}", sw.Elapsed);
-
-            sw.Reset();
-            sw.Start();
             Excel.Worksheet sheet = (Excel.Worksheet)Globals.ThisAddIn.Application.ActiveSheet;
-            sw.Stop();
-            Debug.WriteLine("Excel.Worksheet sheet Elapsed={0}", sw.Elapsed);
-
-            sw.Reset();
-            sw.Start();
             sheet.Change += Sheet_Change;
-            sw.Stop();
-            Debug.WriteLine("sheet.Change += Sheet_Change Elapsed={0}", sw.Elapsed);
         }
 
         private void Sheet_Change(Excel.Range Target)
@@ -82,7 +71,7 @@ namespace DocGen.View
             Initialize();
             Excel.Worksheet sheet = (Excel.Worksheet)Globals.ThisAddIn.Application.ActiveSheet;
             sheet.Change -= Sheet_Change;
-            DeleteSheetBorders();
+            // DeleteSheetBorders();
         }
 
         public void DrawSheetBorders()

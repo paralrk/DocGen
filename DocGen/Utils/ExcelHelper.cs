@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DocGen.View.Blank;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -32,7 +33,7 @@ namespace DocGen.Utils
         {
             xlApp.PrintCommunication = false;
             Excel.PageSetup pageSetup = (Excel.PageSetup)sheet.PageSetup;
-            //pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+
             pageSetup.BottomMargin = xlApp.CentimetersToPoints(0.0);
             pageSetup.TopMargin = xlApp.CentimetersToPoints(0.5);
             pageSetup.LeftMargin = xlApp.CentimetersToPoints(0.7);
@@ -42,6 +43,32 @@ namespace DocGen.Utils
             pageSetup.PrintArea = "A:Z";
             pageSetup.Zoom = 100;
             xlApp.PrintCommunication = true;
+            SetPageSpecificSettings(sheet, pageSetup);
+            
+        }
+
+        public static void SetPageSpecificSettings(Excel.Worksheet sheet, 
+                                                    Excel.PageSetup pageSetup)
+        {
+            string type = ListPage.GetDocumentType(sheet);
+            switch (type)
+            {
+                case "Перечень элементов":
+                    pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+                    pageSetup.PrintArea = "A:Z";
+                    break;
+                case "Спецификация":
+                    pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA4;
+                    pageSetup.PrintArea = "A:Z";
+                    break;
+                case "Ведомость покупных изделий":
+                    pageSetup.PaperSize = Excel.XlPaperSize.xlPaperA3;
+                    pageSetup.Orientation = Excel.XlPageOrientation.xlLandscape;
+                    pageSetup.PrintArea = "A:AT";
+                    break;
+                default:
+                    break;
+            }
         }
 
         public static void DisableZeros()

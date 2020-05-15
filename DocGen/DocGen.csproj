@@ -36,7 +36,7 @@
     <PublishUrl>Publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.0.1.3</ApplicationVersion>
+    <ApplicationVersion>1.1.0.1</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -217,6 +217,8 @@
     <Compile Include="View\AboutWindow.Designer.cs">
       <DependentUpon>AboutWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Blank\A3FirstPageBlankTextFiller.cs" />
+    <Compile Include="View\Blank\A3SecondPageBlankFiller.cs" />
     <Compile Include="View\Blank\A4FirstPageBlankTextFiller.cs" />
     <Compile Include="View\Blank\A4SecondPageBlankFiller.cs" />
     <Compile Include="Model\Blank.cs" />
@@ -237,6 +239,8 @@
     <Compile Include="View\EmptyDocuments\PE3EmptyDocument.cs" />
     <Compile Include="View\EmptyDocuments\SpecEmptyDocument.cs" />
     <Compile Include="View\EmptyDocuments\VPEmptyDocument.cs" />
+    <Compile Include="View\Formatters\A3FirstPage.cs" />
+    <Compile Include="View\Formatters\A3SecondPage.cs" />
     <Compile Include="View\Formatters\A4FirstPage.cs" />
     <Compile Include="View\Formatters\A4SecondPage.cs" />
     <Compile Include="Model\BOMReader.cs" />
@@ -251,6 +255,9 @@
     <Compile Include="Model\Components.cs" />
     <Compile Include="Model\Documents\Comparers\DesignatorComparer.cs" />
     <Compile Include="Model\Documents\Comparers\DesignatorLengthComparer.cs" />
+    <Compile Include="View\Formatters\VPFirstPage.cs" />
+    <Compile Include="View\Formatters\VPFormatter.cs" />
+    <Compile Include="View\Formatters\VPSecondPage.cs" />
     <Compile Include="View\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +288,7 @@
     <Compile Include="View\Formatters\RegistrationList.cs" />
     <Compile Include="Utils\StyleHelper.cs" />
     <Compile Include="Utils\TypesReader.cs" />
+    <Compile Include="View\Unformatters\VPUnformatter.cs" />
     <EmbeddedResource Include="View\AboutWindow.resx">
       <DependentUpon>AboutWindow.cs</DependentUpon>
     </EmbeddedResource>

@@ -25,33 +25,11 @@ namespace DocGen.View.Unformatters
         {
             ExcelHelper.DisableUpdating();
 
-            Stopwatch sw = new Stopwatch();
-            Debug.WriteLine("Unformatting document");
-
-            sw.Start();
             DeleteRows();
-            sw.Stop();
-            Debug.WriteLine("DeleteRows() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             ClearFormat();
-            sw.Stop();
-            Debug.WriteLine("ClearFormat() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             UnmergeCells();
-            sw.Stop();
-            Debug.WriteLine("UnmergeCells() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             DeleteColumns();
-            sw.Stop();
-            Debug.WriteLine("DeleteColumns() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             FormatEmptyDocument();
-            sw.Stop();
-            Debug.WriteLine("FormatEmptyDocument() Elapsed={0}", sw.Elapsed);
 
             ExcelHelper.EnableUpdating();
         }

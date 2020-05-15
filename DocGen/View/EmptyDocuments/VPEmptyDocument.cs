@@ -48,9 +48,19 @@ namespace DocGen.View.EmptyDocuments
         public override void FormatCells()
         {
             base.FormatCells();
-            sheet.Range[sheet.Cells[1, 1], sheet.Cells[1, 11]].
+            sheet.Range["1:1"].Insert();
+            sheet.Range["A1:A2"].Merge();
+            sheet.Range["B1:B2"].Merge();
+            sheet.Range["C1:C2"].Merge();
+            sheet.Range["D1:D2"].Merge();
+            sheet.Range["E1:E2"].Merge();
+            sheet.Range["F1:F2"].Merge();
+            sheet.Range["G1:J1"].Merge();
+            sheet.Range["K1:K2"].Merge();
+            sheet.Range[sheet.Cells[1, 1], sheet.Cells[2, 11]].
                 HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
-            ((Excel.Range)sheet.Cells.Rows[1]).VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            sheet.Range[sheet.Cells[1, 1], sheet.Cells[2, 11]].
+                VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
             ((Excel.Range)sheet.Cells[1, 1]).Orientation = 90;
         }
 
@@ -66,32 +76,33 @@ namespace DocGen.View.EmptyDocuments
         {
             base.FillTitle();
             Excel.Range cells = (Excel.Range)sheet.Cells;
-            ((Excel.Range)cells[1, 1]).Value2 = "№ строки";
-            ((Excel.Range)cells[1, 2]).Value2 = "Наименование";
-            ((Excel.Range)cells[1, 3]).Value2 = "Код продукции";
-            ((Excel.Range)cells[1, 4]).Value2 = "Обозначение документа на поставку";
-            ((Excel.Range)cells[1, 5]).Value2 = "Поставщик";
-            ((Excel.Range)cells[1, 6]).Value2 = "Куда входит (обозначение)";
-            ((Excel.Range)cells[1, 7]).Value2 = "на изделие";
-            ((Excel.Range)cells[1, 8]).Value2 = "в комплекты";
-            ((Excel.Range)cells[1, 9]).Value2 = "на регулир.";
-            ((Excel.Range)cells[1, 10]).Value2 = "всего";
-            ((Excel.Range)cells[1, 11]).Value2 = "Примечание";
+            sheet.Range["A1:A2"].Value2 = "№ строки";
+            sheet.Range["B1:B2"].Value2 = "Наименование";
+            sheet.Range["C1:C2"].Value2 = "Код продукции";
+            sheet.Range["D1:D2"].Value2 = "Обозначение документа на поставку";
+            sheet.Range["E1:E2"].Value2 = "Поставщик";
+            sheet.Range["F1:F2"].Value2 = "Куда входит (обозначение)";
+            sheet.Range["G1:J1"].Value2 = "Количество";
+            ((Excel.Range)cells[2, 7]).Value2 = "на из- делие";
+            ((Excel.Range)cells[2, 8]).Value2 = "в ком- плекты";
+            ((Excel.Range)cells[2, 9]).Value2 = "на ре- гулир.";
+            ((Excel.Range)cells[2, 10]).Value2 = "всего";
+            sheet.Range["K1:K2"].Value2 = "Приме- чание";
             // font sizes
-            ((Excel.Range)cells[1, 1]).Font.Size = 11;
-            ((Excel.Range)cells[1, 7]).Font.Size = 11;
-            ((Excel.Range)cells[1, 8]).Font.Size = 11;
-            ((Excel.Range)cells[1, 9]).Font.Size = 11;
-            ((Excel.Range)cells[1, 10]).Font.Size = 11;
+            sheet.Range["A1:A2"].Font.Size = 11;
+            ((Excel.Range)cells[2, 7]).Font.Size = 11;
+            ((Excel.Range)cells[2, 8]).Font.Size = 11;
+            ((Excel.Range)cells[2, 9]).Font.Size = 11;
+            ((Excel.Range)cells[2, 10]).Font.Size = 11;
 
             //((Excel.Range)sheet.Columns[3]).ShrinkToFit = true;
-            ((Excel.Range)cells[1, 4]).WrapText = true;
-            ((Excel.Range)cells[1, 6]).WrapText = true;
-            ((Excel.Range)cells[1, 7]).WrapText = true;
-            ((Excel.Range)cells[1, 8]).WrapText = true;
-            ((Excel.Range)cells[1, 9]).WrapText = true;
-            ((Excel.Range)cells[1, 10]).WrapText = true;
-            ((Excel.Range)cells[1, 11]).WrapText = true;
+            sheet.Range["D1:D2"].WrapText = true;
+            sheet.Range["F1:F2"].WrapText = true;
+            ((Excel.Range)cells[2, 7]).WrapText = true;
+            ((Excel.Range)cells[2, 8]).WrapText = true;
+            ((Excel.Range)cells[2, 9]).WrapText = true;
+            ((Excel.Range)cells[2, 10]).WrapText = true;
+            sheet.Range["K1:K2"].WrapText = true;
         }
     }
 }
