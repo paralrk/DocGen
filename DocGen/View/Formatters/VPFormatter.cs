@@ -31,10 +31,10 @@ namespace DocGen.View.Formatters
             int pages = 1;
             if (usedRange > 23)
             {
-                // 23 - count of rows at first list and +1 at the end
-                // add 28 helps get rid of rounding 
+                // 25 - count of rows at first list and header
+                // and +1 at the end add 28 helps get rid of rounding 
                 // (for int: 10 / 29 = 0,  (10 + 28) / 29 = 1)
-                pages = (usedRange - 23 + 28) / 29 + 1;
+                pages = (usedRange - 25 + 28) / 29 + 1;
             }
             if (isRegistrationList && pages > 3)
             {
