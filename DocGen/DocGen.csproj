@@ -36,7 +36,7 @@
     <PublishUrl>Publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.1.0.2</ApplicationVersion>
+    <ApplicationVersion>1.1.0.3</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -313,10 +313,6 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DocGenClassDiagram.cd" />
-    <None Include="DocGen_1_TemporaryKey.pfx" />
-    <None Include="DocGen_2_TemporaryKey.pfx" />
-    <None Include="DocGen_3_TemporaryKey.pfx" />
-    <None Include="DocGen_TemporaryKey.pfx" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
