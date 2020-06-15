@@ -25,55 +25,20 @@ namespace DocGen.View.Formatters
 
         public void Format()
         {
-            Stopwatch sw = new Stopwatch();
-            Debug.WriteLine("Formatting VP First Page document");
-
-            sw.Start();
             SetRowsHeight();
-            sw.Stop();
-            Debug.WriteLine("SetRowsHeight() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             SetColumnsWidth();
-            sw.Stop();
-            Debug.WriteLine("SetColumnsWidth() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             MergeCells();
-            sw.Stop();
-            Debug.WriteLine("MergeCells() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             DrawBorders();
-            sw.Stop();
-            Debug.WriteLine("DrawBorders() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             FillBlank();
-            sw.Stop();
-            Debug.WriteLine("FillBlank() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             FillBlankText();
-            sw.Stop();
-            Debug.WriteLine("FillBlankText() Elapsed={0}", sw.Elapsed);
-
         }
 
         private void SetRowsHeight()
         {
+            sheet.Range["A1:A2"].UnMerge();
             // insert additional rows
 
-            Debug.WriteLine("Adding rows A3FirstPage");
-            Stopwatch sw = new Stopwatch();
-            sw.Start();
             sheet.Range["26:37"].Insert();
-            sw.Stop();
-            Debug.WriteLine("Rows added. Elapsed={0}", sw.Elapsed);
-
-            Debug.WriteLine("Set rows height A3FirstPage");
-            sw.Reset();
-            sw.Start();
 
             Excel.Range range;
 
@@ -93,9 +58,6 @@ namespace DocGen.View.Formatters
             range.RowHeight = 23; // 8mm
             range = sheet.Range["29:37"];
             range.RowHeight = 15; // 5mm
-
-            sw.Stop();
-            Debug.WriteLine("Rows height set. Elapsed={0}", sw.Elapsed);
         }
         virtual protected void SetColumnsWidth()
         {

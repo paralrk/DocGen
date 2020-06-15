@@ -26,33 +26,11 @@ namespace DocGen.View.Formatters
 
         public void Format()
         {
-            Stopwatch sw = new Stopwatch();
-            Debug.WriteLine("Formatting VP Second Page document");
-
-            sw.Start();
             SetRowsHeight();
-            sw.Stop();
-            Debug.WriteLine("SetRowsHeight() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             MergeCells();
-            sw.Stop();
-            Debug.WriteLine("MergeCells() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             DrawBorders();
-            sw.Stop();
-            Debug.WriteLine("DrawBorders() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             FillBlank();
-            sw.Stop();
-            Debug.WriteLine("FillBlank() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
             FillBlankText();
-            sw.Stop();
-            Debug.WriteLine("FillBlankText() Elapsed={0}", sw.Elapsed);
         }
 
         virtual protected void SetRowsHeight()
@@ -62,7 +40,7 @@ namespace DocGen.View.Formatters
                 International[Excel.XlApplicationInternational.xlListSeparator];
             // insert additional rows
             string rowsRange = firstRow + ":" + (firstRow + 1) + sep +
-                    (firstRow + 29) + ":" + (firstRow + 33);
+                    (firstRow + 28) + ":" + (firstRow + 32);
             sheet.Range[rowsRange].Insert();
 
             string str;

@@ -31,11 +31,6 @@ namespace DocGen.View.Blank
             this.blankUC.FillBlank();
         }
 
-        private void CancelButton_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Close();
