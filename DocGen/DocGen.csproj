@@ -36,7 +36,7 @@
     <PublishUrl>Publish\</PublishUrl>
     <InstallUrl />
     <TargetCulture>ru</TargetCulture>
-    <ApplicationVersion>1.1.0.3</ApplicationVersion>
+    <ApplicationVersion>1.1.1.1</ApplicationVersion>
     <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateInterval>7</UpdateInterval>
@@ -190,6 +190,7 @@
   -->
   <ItemGroup>
     <Compile Include="Controller\RibbonController.cs" />
+    <Compile Include="Model\Documents\Comparers\NominalComparer.cs" />
     <Compile Include="Model\Documents\Comparers\VPComparer.cs" />
     <Compile Include="Model\Documents\DocumentsFactory.cs" />
     <Compile Include="Model\Documents\IDocument.cs" />

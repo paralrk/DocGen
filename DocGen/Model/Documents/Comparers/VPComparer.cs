@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DocGen.Model.Documents.Comparers
@@ -42,24 +43,36 @@ namespace DocGen.Model.Documents.Comparers
         {
             string des1 = c1.GetDesignators();
             string des2 = c2.GetDesignators();
+
+            Regex regex = new Regex(@"[0-9]", RegexOptions.Compiled);
+
+            des1 = regex.Replace(des1, "");
+            des2 = regex.Replace(des2, "");
+
+            if (String.IsNullOrEmpty(des1) || !map.ContainsKey(des1[0]))
+            {
+                return -1;
+            }
+            if (String.IsNullOrEmpty(des2) || !map.ContainsKey(des2[0]))
+            {
+                return 1;
+            }
+
             if (des1.Equals(des2))
             {
                 return 0;
             }
-            if (String.IsNullOrEmpty(des1))
+
+            if (map[des1[0]] == map[des2[0]])
             {
-                return -1;
+
+                if (des1.Length > 1 && des2.Length > 1)
+                {
+                    return des1[1].CompareTo(des2[1]);
+                }
+
             }
-            if (String.IsNullOrEmpty(des2))
-            {
-                return 1;
-            }
-            if (!map.ContainsKey(des1[0])) {
-                return -1;
-            }
-            if (!map.ContainsKey(des2[0])) {
-                return 1;
-            }
+
             if (map[des1[0]] < map[des2[0]])
             {
                 return 1;

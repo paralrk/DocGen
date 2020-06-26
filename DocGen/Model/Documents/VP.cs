@@ -44,8 +44,13 @@ namespace DocGen.Model.Documents
                 group.CList = group.CList.OrderBy(c => c.GetDesignators().Length).
                     ThenBy(c => c.GetDesignators()).ToList();
                 group.CList = group.CList.OrderBy(c => c.Part.Manufacturer).
-                    ThenBy(c => c.Part.ManufacturerPartNumber).ToList();
-            }
+                    // ThenBy(c => c.Part.ManufacturerPartNumber).
+                    ThenBy((c => c), new NominalComparer()).
+                    ToList();
+
+                //group.CList = group.CList.OrderBy(c => c.Part.Manufacturer).
+                //    ThenBy(c => c.Part.ManufacturerPartNumber).ToList();
+             }
         }
 
         protected override void FillDocumentRows()
