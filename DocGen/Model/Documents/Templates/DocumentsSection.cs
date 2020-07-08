@@ -21,7 +21,7 @@ namespace DocGen.Model.Documents.Templates
             documents.Add(new RowSpec());
             documents.Add(new RowSpec("А4", "", "", "", "Перечень элементов", 0, ""));
             documents.Add(new RowSpec());
-            documents.Add(new RowSpec("*)", "", "", "", "Ведомость покупных изделий", 0, ""));
+            documents.Add(new RowSpec("*)", "", "", "", "Ведомость покупных изделий", 0, "*) А4, А3"));
             documents.Add(new RowSpec());
             documents.Add(new RowSpec("*)", "", "", "", "Комплект карт рабочих", 0, ""));
             documents.Add(new RowSpec("", "", "", "", "режимов изделий", 0, "*) А4, А3"));
@@ -32,6 +32,8 @@ namespace DocGen.Model.Documents.Templates
             documents.Add(new RowSpec("А4", "", "", "", "Плата печатная", 0, "Размножать"));
             documents.Add(new RowSpec("", "", "", "", "Данные проектирования", 0, "по особому"));
             documents.Add(new RowSpec("", "", "", "", "Удостоверяющий лист", 0, "требованию"));
+            documents.Add(new RowSpec());
+            documents.Add(new RowSpec());
         }
 
         public List<RowSpec> GetDocuments()

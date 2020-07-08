@@ -118,10 +118,10 @@ namespace DocGen.View.Formatters
             sheet.Range[sheet.Cells[firstRow + 1, 3], sheet.Cells[firstRow + 2, 4]].Font.Size = 12;
             sheet.Range[sheet.Cells[firstRow + 1, 5], sheet.Cells[firstRow + 1, 14]].Font.Size = 12;
             sheet.Range[sheet.Cells[firstRow + 2, 5], sheet.Cells[firstRow + 2, 12]].Font.Size = 11;
-            sheet.Range[sheet.Cells[firstRow + 2, 13], sheet.Cells[firstRow + 2, 14]].Font.Size = 9;
+            sheet.Range[sheet.Cells[firstRow + 2, 13], sheet.Cells[firstRow + 2, 14]].Font.Size = 8;
             sheet.Range[sheet.Cells[firstRow + 1, 15], sheet.Cells[firstRow + 2, 16]].Font.Size = 10;
             sheet.Range[sheet.Cells[firstRow + 1, 17], sheet.Cells[firstRow + 2, 17]].Font.Size = 12;
-            sheet.Range[sheet.Cells[firstRow + 1, 18], sheet.Cells[firstRow + 2, 21]].Font.Size = 10;
+            sheet.Range[sheet.Cells[firstRow + 1, 18], sheet.Cells[firstRow + 2, 21]].Font.Size = 9;
             sheet.Range[sheet.Cells[firstRow + 1, 22], sheet.Cells[firstRow + 2, 26]].Font.Size = 12;
             // rows
             sheet.Range[sheet.Cells[firstRow + 3, 3], sheet.Cells[firstRow + 29, 26]].Font.Size = 11;

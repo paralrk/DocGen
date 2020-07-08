@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -171,7 +172,8 @@ namespace DocGen.Model.Documents.Comparers
             decimal decimalVal = 0;
             try
             {
-                decimalVal = System.Convert.ToDecimal(stringVal);
+                decimalVal = System.Convert.ToDecimal(stringVal.Replace(".", ","),
+                    new NumberFormatInfo() { NumberDecimalSeparator = "," });
             }
             catch (System.OverflowException)
             {
@@ -185,7 +187,6 @@ namespace DocGen.Model.Documents.Comparers
             {
                 decimalVal = 0;
             }
-
             return decimalVal;
         }
     }

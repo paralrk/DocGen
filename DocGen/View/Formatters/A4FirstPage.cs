@@ -282,6 +282,9 @@ namespace DocGen.View.Formatters
             sheet.Range["M26:Z36"].HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
             sheet.Range["M37:R37"].HorizontalAlignment = Excel.XlHAlign.xlHAlignLeft;
             sheet.Range["S37:Z37"].HorizontalAlignment = Excel.XlHAlign.xlHAlignRight;
+
+            sheet.Range["A14:B15"].WrapText = true;
+            sheet.Range["M32:R35"].WrapText = true;
         }
 
         virtual protected void FillBlankText()
