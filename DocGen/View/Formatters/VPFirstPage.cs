@@ -105,6 +105,7 @@ namespace DocGen.View.Formatters
             sheet.Range["AM2:AO2"].Value2 = "на ре- гулир.";
             sheet.Range["AP2:AQ2"].Value2 = "всего";
             sheet.Range["AR1:AT2"].Value2 = "Приме- чание";
+            sheet.Range["AH36:AM36"].Value2 = "Ведомость покупных изделий";
 
             for (int i = 3, line = 1; i <= 25; i++, line++)
             {
