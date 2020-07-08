@@ -21,6 +21,8 @@ namespace DocGen.View.EmptyDocuments
                     return new SpecEmptyDocument();
                 case "Ведомость покупных изделий":
                     return new VPEmptyDocument();
+                case "Д33-УД":
+                    return new D33_UDEmptyDocument();
                 default:
                     return new PE3EmptyDocument();
             }
@@ -39,6 +41,11 @@ namespace DocGen.View.EmptyDocuments
         public EmptyDocument GetVPEmptyDocument()
         {
             return new VPEmptyDocument();
+        }
+
+        public EmptyDocument GetD33_UDEmptyDocument()
+        {
+            return new D33_UDEmptyDocument();
         }
     }
 }

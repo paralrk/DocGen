@@ -44,6 +44,7 @@
             this.NewPE3Button = this.Factory.CreateRibbonButton();
             this.NewSpecificationButton = this.Factory.CreateRibbonButton();
             this.NewVPButton = this.Factory.CreateRibbonButton();
+            this.NewD33_UD = this.Factory.CreateRibbonButton();
             this.EditGroup = this.Factory.CreateRibbonGroup();
             this.EditButton = this.Factory.CreateRibbonButton();
             this.FormatButton = this.Factory.CreateRibbonButton();
@@ -111,6 +112,7 @@
             this.NewDocumentsGroup.Items.Add(this.NewPE3Button);
             this.NewDocumentsGroup.Items.Add(this.NewSpecificationButton);
             this.NewDocumentsGroup.Items.Add(this.NewVPButton);
+            this.NewDocumentsGroup.Items.Add(this.NewD33_UD);
             this.NewDocumentsGroup.Label = "Новые документы";
             this.NewDocumentsGroup.Name = "NewDocumentsGroup";
             // 
@@ -131,6 +133,12 @@
             this.NewVPButton.Label = "Ведомость покупных изделий";
             this.NewVPButton.Name = "NewVPButton";
             this.NewVPButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.NewVPButton_Click);
+            // 
+            // NewD33_UD
+            // 
+            this.NewD33_UD.Label = "Д33-УД";
+            this.NewD33_UD.Name = "NewD33_UD";
+            this.NewD33_UD.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.NewD33_UD_Click);
             // 
             // EditGroup
             // 
@@ -252,6 +260,7 @@
         internal Microsoft.Office.Tools.Ribbon.RibbonButton SWSpecButton;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton NewVPButton;
         internal Microsoft.Office.Tools.Ribbon.RibbonButton VPButton;
+        internal Microsoft.Office.Tools.Ribbon.RibbonButton NewD33_UD;
     }
 
     partial class ThisRibbonCollection

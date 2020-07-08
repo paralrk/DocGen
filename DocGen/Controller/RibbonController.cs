@@ -121,6 +121,15 @@ namespace DocGen.Controller
 
         }
 
+        public void NewD33_UD()
+        {
+            EmptyDocument emptyD33_UD = emptyDocumentsFactory.GetD33_UDEmptyDocument();
+            emptyD33_UD.NewDocument();
+            emptyD33_UD.InitFormatCells();
+            emptyD33_UD.Format();
+
+        }
+
         public void EditDocument()
         {
             if (CheckState() == States.Formatted)

@@ -22,6 +22,8 @@ namespace DocGen.View.Unformatters
                     return new SpecUnformatter();
                 case "Ведомость покупных изделий":
                     return new VPUnformatter();
+                case "Д33-УД":
+                    return new D33_UDUnformatter();
                 default:
                     return null;
             }

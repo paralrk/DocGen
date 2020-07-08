@@ -58,6 +58,11 @@ namespace DocGen
             controller.NewVP();
         }
 
+        private void NewD33_UD_Click(object sender, RibbonControlEventArgs e)
+        {
+            controller.NewD33_UD();
+        }
+
         private void EditButton_Click(object sender, RibbonControlEventArgs e)
         {
             controller.EditDocument();

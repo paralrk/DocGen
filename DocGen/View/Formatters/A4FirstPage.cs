@@ -26,7 +26,7 @@ namespace DocGen.View.Formatters
         public void format()
         {
             Stopwatch sw = new Stopwatch();
-            Debug.WriteLine("Formatting Spec First Page document");
+            Debug.WriteLine("Formatting A4 First Page document");
 
             sw.Start();
             SetRowsHeight();
@@ -47,17 +47,16 @@ namespace DocGen.View.Formatters
             DrawBorders();
             sw.Stop();
             Debug.WriteLine("DrawBorders() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
-            FillBlank();
-            sw.Stop();
-            Debug.WriteLine("FillBlank() Elapsed={0}", sw.Elapsed);
-
+            
             sw.Start();
             FillBlankText();
             sw.Stop();
             Debug.WriteLine("FillBlankText() Elapsed={0}", sw.Elapsed);
 
+            sw.Start();
+            FillBlank();
+            sw.Stop();
+            Debug.WriteLine("FillBlank() Elapsed={0}", sw.Elapsed);
         }
 
         private void SetRowsHeight()
