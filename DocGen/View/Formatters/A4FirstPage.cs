@@ -26,7 +26,7 @@ namespace DocGen.View.Formatters
         public void format()
         {
             Stopwatch sw = new Stopwatch();
-            Debug.WriteLine("Formatting Spec First Page document");
+            Debug.WriteLine("Formatting A4 First Page document");
 
             sw.Start();
             SetRowsHeight();

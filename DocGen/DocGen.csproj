@@ -238,6 +238,7 @@
     <Compile Include="View\EmptyDocuments\EmptyDocument.cs" />
     <Compile Include="View\EmptyDocuments\EmptyDocumentsFactory.cs" />
     <Compile Include="View\EmptyDocuments\PE3EmptyDocument.cs" />
+    <Compile Include="View\EmptyDocuments\D33_UDEmptyDocument.cs" />
     <Compile Include="View\EmptyDocuments\SpecEmptyDocument.cs" />
     <Compile Include="View\EmptyDocuments\VPEmptyDocument.cs" />
     <Compile Include="View\Formatters\A3FirstPage.cs" />
@@ -248,7 +249,9 @@
     <Compile Include="View\Formatters\Formatter.cs" />
     <Compile Include="View\Blank\ListPage.cs" />
     <Compile Include="View\Formatters\FormattersFactory.cs" />
+    <Compile Include="View\Formatters\D33_UDFirstPage.cs" />
     <Compile Include="View\Formatters\SpecFirstPage.cs" />
+    <Compile Include="View\Formatters\D33_UDFormatter.cs" />
     <Compile Include="View\Formatters\SpecFormatter.cs" />
     <Compile Include="View\Formatters\SpecSecondPage.cs" />
     <Compile Include="Model\Component.cs" />
@@ -267,6 +270,7 @@
     </Compile>
     <Compile Include="View\SheetBordersDrawer.cs" />
     <Compile Include="View\Unformatters\PE3Unformatter.cs" />
+    <Compile Include="View\Unformatters\D33_UDUnformatter.cs" />
     <Compile Include="View\Unformatters\SpecUnformatter.cs" />
     <Compile Include="View\Unformatters\Unformatter.cs" />
     <Compile Include="View\Unformatters\UnformattersFactory.cs" />

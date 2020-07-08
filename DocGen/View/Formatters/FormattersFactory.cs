@@ -22,6 +22,8 @@ namespace DocGen.View.Formatters
                     return new SpecFormatter();
                 case "Ведомость покупных изделий":
                     return new VPFormatter();
+                case "Д33-УД":
+                    return new D33_UDFormatter();
                 default:
                     return null;
             }
