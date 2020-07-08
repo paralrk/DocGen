@@ -47,17 +47,16 @@ namespace DocGen.View.Formatters
             DrawBorders();
             sw.Stop();
             Debug.WriteLine("DrawBorders() Elapsed={0}", sw.Elapsed);
-
-            sw.Start();
-            FillBlank();
-            sw.Stop();
-            Debug.WriteLine("FillBlank() Elapsed={0}", sw.Elapsed);
-
+            
             sw.Start();
             FillBlankText();
             sw.Stop();
             Debug.WriteLine("FillBlankText() Elapsed={0}", sw.Elapsed);
 
+            sw.Start();
+            FillBlank();
+            sw.Stop();
+            Debug.WriteLine("FillBlank() Elapsed={0}", sw.Elapsed);
         }
 
         private void SetRowsHeight()

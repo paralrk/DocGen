@@ -83,6 +83,12 @@ namespace DocGen.View.Formatters
             sheet.Range["Q1:T1"].Value2 = "Согласовано";
             sheet.Range["U1:Z1"].Value2 = "Утвердил";
 
+            sheet.Range["M32:R35"].UnMerge();
+            sheet.Range["M32:R34"].Merge();
+            sheet.Range["M35:R35"].Merge();
+            sheet.Range["M35:R35"].Font.Size = 12;
+            sheet.Range["M35:R35"].Value2 = "Данные проектирования";
+            sheet.Range["M36:R36"].Value2 = "Удостоверяющий лист";
         }
     }
 }
