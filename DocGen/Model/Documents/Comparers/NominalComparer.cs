@@ -39,13 +39,13 @@ namespace DocGen.Model.Documents.Comparers
         // private Regex regexValueFarad = new Regex(@"[0-9.,]+[а-яА-Я ]*Ф", RegexOptions.Compiled);
         // private Regex regexValueOhm = new Regex(@"[0-9.,]+[а-яА-Я ]*Ом", RegexOptions.Compiled);
 
-        private Regex regexValueFarad = new Regex(@"[0-9.,]+?(?=[а-яА-Я ]*Ф)", RegexOptions.Compiled);
-        private Regex regexValueOhm = new Regex(@"[0-9.,]+?(?=[а-яА-Я ]*Ом)", RegexOptions.Compiled);
+        private Regex regexValueFarad = new Regex(@"[0-9.,]+?(?=[а-яА-Я\s]*Ф)", RegexOptions.Compiled);
+        private Regex regexValueOhm = new Regex(@"[0-9.,]+?(?=[а-яА-Я\s]*Ом)", RegexOptions.Compiled);
 
         private Regex regexSeriesFarad =
-                new Regex(@"^.*?(?=[0-9.,]+[а-яА-Я ]*Ф)", RegexOptions.Compiled);
+                new Regex(@"^.*?(?=[0-9.,]+[а-яА-Я\s]*Ф)", RegexOptions.Compiled);
         private Regex regexSeriesOhm =
-                new Regex(@"^.*?(?=[0-9.,]+[а-яА-Я ]*Ом)", RegexOptions.Compiled);
+                new Regex(@"^.*?(?=[0-9.,]+[а-яА-Я\s]*Ом)", RegexOptions.Compiled);
 
         private string farad = "Ф";
         private string ohm = "Ом";
@@ -112,6 +112,11 @@ namespace DocGen.Model.Documents.Comparers
             // найти части до номинала;
             MatchCollection matchedPrefixPN1 = regexSeriesUnit.Matches(pn1);
             MatchCollection matchedPrefixPN2 = regexSeriesUnit.Matches(pn2);
+
+            if (matchedPrefixPN1.Count == 0 || matchedPrefixPN2.Count == 0)
+            {
+                return part1.ManufacturerPartNumber.CompareTo(part2.ManufacturerPartNumber);
+            }
 
             string prefixPN1 = matchedPrefixPN1[0].Value;
             string prefixPN2 = matchedPrefixPN2[0].Value;
